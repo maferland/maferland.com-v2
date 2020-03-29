@@ -1,9 +1,7 @@
-import Layout from "~/components/Layout";
+import withLayout from "~/components/Layout";
 
-export default function Index() {
-  return (
-    <Layout>
-      <p>Hello Next.js</p>
-    </Layout>
-  );
+function Index() {
+  return <p>Hello Next.js</p>;
 }
+
+export default withLayout(Index);

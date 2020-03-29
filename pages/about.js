@@ -1,9 +1,7 @@
-import Layout from "~/components/Layout";
+import withLayout from "~/components/Layout";
 
-export default function About() {
-  return (
-    <Layout>
-      <p>This is the about page</p>
-    </Layout>
-  );
+function About() {
+  return <p>This is the about page</p>;
 }
+
+export default withLayout(About);
