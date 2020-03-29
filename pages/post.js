@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import withLayout from "../components/layout";
 
 const Post = props => (
