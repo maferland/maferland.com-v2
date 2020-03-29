@@ -1,4 +1,4 @@
-import withLayout from "~/components/layout";
+import withLayout from "../components/layout";
 
 function Index() {
   return <p>Hello Next.js</p>;
