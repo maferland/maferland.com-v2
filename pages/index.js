@@ -1,6 +1,6 @@
 import withLayout from "../components/layout";
 
-function Index() {
+const Index = () => {
   return <p>Hello Next.js</p>;
 }
 
