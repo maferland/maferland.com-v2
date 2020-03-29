@@ -1,5 +1,5 @@
 import fetch from "isomorphic-unfetch";
-import Link from 'next/link';
+import Link from "next/link";
 import withLayout from "../components/layout";
 
 const Index = props => (
@@ -14,6 +14,30 @@ const Index = props => (
         </li>
       ))}
     </ul>
+    <style jsx>{`
+      h1,
+      a {
+        font-family: "Arial";
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        margin: 5px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+
+      a:hover {
+        opacity: 0.6;
+      }
+    `}</style>
   </div>
 );
 
