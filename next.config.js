@@ -1,8 +1,9 @@
 const path = require("path");
+const withSass = require("@zeit/next-sass");
 
-module.exports = {
+module.exports = withSass({
   webpack(config, options) {
-    config.resolve.alias['components'] = path.resolve(__dirname)
-    return config
-  },
-}
+    config.resolve.alias["~"] = path.resolve(__dirname);
+    return config;
+  }
+});
