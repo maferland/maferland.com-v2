@@ -1,7 +1,5 @@
-const year = new Date().getFullYear();
-
 const Footer = () => {
-  return <div className="footer">Marc-Antoine Ferland - {year}</div>;
+  return <div className="footer" />;
 };
 
 export default Footer;
