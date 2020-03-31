@@ -1,9 +1,11 @@
-import Layout from "../components/layout";
-import "./index.scss";
+import Layout from '../components/layout';
+import './index.scss';
 
 const Index = () => (
   <Layout>
-    <h1>Home</h1>
+    <div className="hero">
+      <h1>Home</h1>
+    </div>
   </Layout>
 );
 
