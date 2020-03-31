@@ -18,6 +18,7 @@
     "react/react-in-jsx-scope": ["off"],
     "react/jsx-props-no-spreading": ["off"],
     "react/destructuring-assignment": ["off"],
+    "jsx-a11y/anchor-is-valid": ["off"],
     "no-return-assign": ["off"],
     "no-param-reassign": ["off"]
   }

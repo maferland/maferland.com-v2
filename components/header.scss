@@ -1,0 +1,22 @@
+@import '../styles/variables.scss';
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  a {
+    color: #000;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.is-link {
+  margin: 0 0.5em;
+}
