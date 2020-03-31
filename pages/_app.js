@@ -1,3 +1,4 @@
+import 'purecss/build/pure-min.css';
 import '../styles/global.scss';
 import '../styles/reset.scss';
 
