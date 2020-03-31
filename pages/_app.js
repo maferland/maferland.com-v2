@@ -1,4 +1,4 @@
-import 'purecss/build/pure-min.css';
+import 'bulma/css/bulma.css';
 import '../styles/font.scss';
 import '../styles/global.scss';
 import '../styles/reset.scss';
