@@ -1,23 +1,64 @@
 import React from 'react';
-import Typed from 'typed.js';
 import './hero.scss';
 
-const sentences = ["Hello, I'm Marc-Antoine. Nice to meet you!", "I'm a remote frontend engineer."];
+const prefix = "Hello, I'm Marc-Antoine";
+const suffixes = [
+  'a frontend engineer.',
+  'a remote enthusiast.',
+  'a coffee lover.',
+  'a lifelong learner.',
+];
+
+const getRandomSuffixIndex = () => {
+  return Math.floor(Math.random() * suffixes.length);
+};
 
 class Hero extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { suffixIndex: undefined };
+  }
+
   componentDidMount() {
-    // eslint-disable-next-line no-new
-    new Typed('#hero', {
-      strings: sentences,
-      typeSpeed: 20,
-    });
+    setTimeout(() => this.randomizeSuffix());
+    this.interval = setInterval(() => this.randomizeSuffix(), 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  randomizeSuffix() {
+    let randomIndex;
+    do {
+      randomIndex = getRandomSuffixIndex();
+    } while (randomIndex === this.state.suffixIndex);
+    this.setState({ suffixIndex: randomIndex });
+  }
+
+  changeSuffix() {
+    this.setState({ suffixIndex: 1 });
   }
 
   render() {
     return (
       <div className="hero">
         <div className="is-mono is-size-2 is-flex">
-          <div id="hero" />
+          <span>
+            {prefix}
+            &nbsp;
+          </span>
+          <div className="is-relative">
+            {suffixes.map((suffix, i) => (
+              <div
+                key={i.toString()}
+                className={`suffix ${i === this.state.suffixIndex ? 'active' : ''}`}
+              >
+                {suffix}
+                <span className="timer" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );
