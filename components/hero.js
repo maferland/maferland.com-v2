@@ -54,7 +54,7 @@ class Hero extends React.Component {
                 key={i.toString()}
                 className={`suffix ${i === this.state.suffixIndex ? 'active' : ''}`}
               >
-                {suffix}
+                <span>{suffix}</span>
                 <span className="timer" />
               </div>
             ))}
