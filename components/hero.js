@@ -5,7 +5,7 @@ const prefix = "Hello, I'm Marc-Antoine";
 const suffixes = [
   'a frontend engineer.',
   'a remote enthusiast.',
-  'a coffee lover.',
+  'a coffee aficionado.',
   'a lifelong learner.',
 ];
 
