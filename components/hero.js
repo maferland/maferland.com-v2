@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/gradient.scss';
 import './hero.scss';
 
 const prefix = "Hello, I'm Marc-Antoine";
@@ -55,7 +56,7 @@ class Hero extends React.Component {
                 className={`suffix ${i === this.state.suffixIndex ? 'active' : ''}`}
               >
                 <span>{suffix}</span>
-                <span className="timer" />
+                <span className="timer is-gradient" />
               </div>
             ))}
           </div>

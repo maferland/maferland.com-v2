@@ -13,11 +13,9 @@ $suffix-padding: 5px;
   opacity: 0;
   position: absolute;
   white-space: nowrap;
-  color: #fff;
 
   > span:not(.timer) {
     padding: 0 5px;
-    background-color: $purple;
   }
 
   &.active {
@@ -30,11 +28,11 @@ $suffix-padding: 5px;
 
 span + span.timer {
   width: 100%;
-  background-color:$pink;
+  background-color: $pink;
   height: $underline-height;
   position: absolute;
   left: 0;
   bottom: 0;
 
-  transition: width 2850ms ease-out;
+  transition: width 3s ease-out;
 }
