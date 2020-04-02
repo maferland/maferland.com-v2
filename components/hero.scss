@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 $underline-height: 4px;
 $suffix-padding: 5px;
 
@@ -15,7 +17,7 @@ $suffix-padding: 5px;
 
   > span:not(.timer) {
     padding: 0 5px;
-    background-color: #7c5295;
+    background-color: $purple;
   }
 
   &.active {
@@ -28,7 +30,7 @@ $suffix-padding: 5px;
 
 span + span.timer {
   width: 100%;
-  background-color: #ee4266;
+  background-color:$pink;
   height: $underline-height;
   position: absolute;
   left: 0;
