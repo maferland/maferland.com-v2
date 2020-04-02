@@ -1,0 +1,23 @@
+@import '../styles/colors.scss';
+@import '../styles/variables.scss';
+@import '../styles/gradient.scss';
+
+.link-container {
+  position: relative;
+  &.active,
+  &:hover {
+    .underline {
+      width: calc(100% - #{$header-link-vertical-margin * 2});
+    }
+  }
+}
+
+.underline {
+  width: 0;
+  height: $underline-height;
+  margin: 0 $header-link-vertical-margin;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width $transition;
+}
