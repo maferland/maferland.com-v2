@@ -1,7 +1,12 @@
 @import '../styles/variables';
+@import '../styles/colors';
 
 .footer {
   height: $footer-height;
   padding-top: 1em;
   padding-bottom: 1em;
+  mix-blend-mode: difference;
+  span {
+    mix-blend-mode: difference;
+  }
 }
