@@ -6,9 +6,7 @@ const Layout = (props) => {
   return (
     <div className="layout">
       <Header />
-      <div className="columns is-centered is-marginless main">
-        <div className="column is-11 is-flex">{props.children}</div>
-      </div>
+      <div className="main">{props.children}</div>
       <Footer className="footer" />
     </div>
   );

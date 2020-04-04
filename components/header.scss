@@ -1,12 +1,17 @@
 @import '../styles/variables.scss';
 @import '../styles/variables.scss';
 
+.header {
+  height: $nav-height;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: $page-width;
+  margin: 10px auto;
 
   a {
     color: #000;

@@ -4,7 +4,7 @@ import './index.scss';
 
 const Index = () => (
   <Layout>
-    <div className="hero-container">
+    <div className="hero-container page">
       <Hero />
     </div>
   </Layout>
