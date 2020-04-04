@@ -1,7 +1,7 @@
 import './footer.scss';
 
 const year = new Date().getFullYear();
-const footerMessage = `© Built with ❤️ by maferland - ${year}`;
+const footerMessage = `© Built with <3 by maferland - ${year}`;
 
 const Footer = () => {
   return (
