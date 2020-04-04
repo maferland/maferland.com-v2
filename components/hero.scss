@@ -6,7 +6,6 @@ $suffix-padding: 5px;
 .hero {
   display: flex;
   justify-content: center;
-  height: calc(100% - #{$nav-height});
 }
 
 .suffix {

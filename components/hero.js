@@ -43,7 +43,7 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <div className="hero">
+      <div className={`hero ${this.props.className}`}>
         <div className="is-mono is-size-2 is-flex">
           <span>
             {prefix}

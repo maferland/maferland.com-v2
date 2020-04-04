@@ -1,14 +1,18 @@
 @import './variables.scss';
 
-html {
-  height: 100%;
-}
-body,
-#__next {
-  height: 100%;
-  margin: 0;
-}
 .page {
   margin: 0 auto;
   width: $page-width;
+}
+
+.fullheight {
+  height: calc(100vh - #{$nav-height});
+
+  & + & {
+    height: 100vh;
+  }
+
+  &:last-of-type {
+    height: calc(100vh - #{$footer-height});
+  }
 }

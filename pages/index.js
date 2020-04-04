@@ -4,9 +4,9 @@ import './index.scss';
 
 const Index = () => (
   <Layout>
-    <div className="hero-container page">
-      <Hero />
-    </div>
+    <Hero className="page fullheight" />
+    <Hero className="page fullheight" />
+    <Hero className="page fullheight" />
   </Layout>
 );
 
