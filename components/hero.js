@@ -21,7 +21,7 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.randomizeSuffix());
+    this.randomizeSuffix();
     this.interval = setInterval(() => this.randomizeSuffix(), 3000);
   }
 
