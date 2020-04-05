@@ -1,17 +1,31 @@
 @import '../styles/variables.scss';
-@import '../styles/variables.scss';
+@import '../styles/colors.scss';
+@import '../styles/mixin.scss';
+
+$nav-vertical-spacing: 10px;
 
 .header {
   height: $nav-height;
 }
-
 .nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: $page-width;
-  margin: 10px auto;
+  margin: $nav-vertical-spacing auto;
+  background-color: $white;
+
+  @include touch {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    a {
+      width: 100%;
+      padding: $nav-vertical-spacing 0;
+    }
+  }
 
   a {
     color: #000;
@@ -20,6 +34,19 @@
     &:hover {
       opacity: 0.7;
     }
+  }
+}
+
+.brand {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @include touch {
+    background-color: $white;
+    z-index: 10;
   }
 }
 
@@ -32,4 +59,52 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @include touch {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: transform $transition;
+    bottom: 0;
+
+    &.active {
+      transform: translateY(110px);
+      background-color: $white;
+    }
+  }
+}
+
+.burger {
+  margin: 1em;
+  width: 40px;
+  display: none;
+  @include touch {
+    display: block;
+  }
+
+  &.active,
+  &:hover {
+    &:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+    div {
+      transform: scale(0);
+    }
+  }
+}
+
+.burger:after,
+.burger:before,
+.burger div {
+  background-color: $black;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: transform $transition;
 }

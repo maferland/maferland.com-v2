@@ -1,6 +1,7 @@
 @import '../styles/colors.scss';
 @import '../styles/variables.scss';
 @import '../styles/gradient.scss';
+@import '../styles/mixin';
 
 .link-container {
   position: relative;
@@ -9,6 +10,10 @@
     .underline {
       width: calc(100% - #{$header-link-vertical-margin * 2});
     }
+  }
+
+  @include touch {
+    margin-top: 10px;
   }
 }
 
