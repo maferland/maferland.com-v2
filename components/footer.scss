@@ -1,5 +1,6 @@
 @import '../styles/variables';
 @import '../styles/colors';
+@import '../styles/mixin';
 
 .footer {
   height: $footer-height;
@@ -8,5 +9,9 @@
   mix-blend-mode: difference;
   span {
     mix-blend-mode: difference;
+  }
+
+  @include touch {
+    white-space: nowrap;
   }
 }
