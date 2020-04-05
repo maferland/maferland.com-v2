@@ -1,5 +1,6 @@
 @import '../styles/colors.scss';
 @import '../styles/variables.scss';
+@import '../styles/mixin.scss';
 
 $suffix-padding: 5px;
 
@@ -7,6 +8,21 @@ $suffix-padding: 5px;
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+
+  @include touch {
+    & > div {
+      flex-direction: column;
+      height: 6em;
+    }
+
+    & div div {
+      width: 100%;
+    }
+
+    .suffix {
+      white-space: break-spaces;
+    }
+  }
 }
 
 .suffix {

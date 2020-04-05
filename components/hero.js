@@ -43,7 +43,7 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <div className={`hero ${this.props.className}`}>
+      <div className={`hero has-text-centered-mobile ${this.props.className}`}>
         <div className="is-mono is-size-2 is-flex">
           <span>
             {prefix}
@@ -53,7 +53,7 @@ class Hero extends React.Component {
             {suffixes.map((suffix, i) => (
               <div
                 key={i.toString()}
-                className={`suffix ${i === this.state.suffixIndex ? 'active' : ''}`}
+                className={`suffix is-size-2 ${i === this.state.suffixIndex ? 'active' : ''}`}
               >
                 <span>{suffix}</span>
                 <span className="timer is-gradient" />
