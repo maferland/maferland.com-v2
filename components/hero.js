@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/gradient.scss';
 import './hero.scss';
 
-const prefix = "Hello, I'm Marc-Antoine";
+const prefix = "Hello, I'm ";
+const name = 'Marc-Antoine';
 const suffixes = [
   'a frontend engineer.',
   'a remote enthusiast.',
@@ -21,7 +22,7 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
-    this.randomizeSuffix();
+    this.setState({ suffixIndex: 0 });
     this.interval = setInterval(() => this.randomizeSuffix(), 3000);
   }
 
@@ -43,24 +44,21 @@ class Hero extends React.Component {
 
   render() {
     return (
-      <div className={`hero has-text-centered-mobile ${this.props.className}`}>
-        <div className="is-mono is-size-2 is-flex">
-          <span>
-            {prefix}
-            &nbsp;
-          </span>
-          <div className="is-relative">
-            {suffixes.map((suffix, i) => (
-              <div
-                key={i.toString()}
-                className={`suffix is-size-2 ${i === this.state.suffixIndex ? 'active' : ''}`}
-              >
-                <span>{suffix}</span>
-                <span className="timer is-gradient" />
-              </div>
-            ))}
+      <div className={`hero has-text-centered-mobile ${this.props.className} is-mono is-size-2`}>
+        <span>
+          {prefix}
+          <nobr>{name}</nobr>
+          &nbsp;
+        </span>
+
+        {suffixes.map((suffix, i) => (
+          <div
+            key={`suffix-${i.toString()}`}
+            className={`suffix is-gradient-after ${i === this.state.suffixIndex ? 'active' : ''}`}
+          >
+            {suffix}
           </div>
-        </div>
+        ))}
       </div>
     );
   }

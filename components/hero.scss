@@ -1,55 +1,51 @@
 @import '../styles/colors.scss';
 @import '../styles/variables.scss';
 @import '../styles/mixin.scss';
+@import '../styles/gradient.scss';
 
 $suffix-padding: 5px;
 
 .hero {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   margin-bottom: 5px;
 
-  @include touch {
-    & > div {
-      flex-direction: column;
-      height: 6em;
-    }
-
-    & div div {
-      display: flex;
-      justify-content: center;
-    }
-
-    .suffix {
-      white-space: break-spaces;
-    }
+  @include until-widescreen {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 .suffix {
-  opacity: 0;
-  position: absolute;
-  white-space: nowrap;
+  display: none;
+  padding: 0 5px;
+  white-space: break-spaces;
+  position: relative;
 
-  > span:not(.timer) {
-    padding: 0 5px;
+  &:after {
+    content: '';
+    height: $underline-height;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
   }
 
   &.active {
-    opacity: 1;
-    .timer {
-      width: 0;
+    display: block;
+    &::after {
+      animation: timer 3s ease-out 1;
     }
   }
 }
 
-span + span.timer {
-  width: 100%;
-  background-color: $pink;
-  height: $underline-height;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  transition: width 3s ease-out;
+@keyframes timer {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }

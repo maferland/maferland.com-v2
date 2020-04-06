@@ -1,5 +1,6 @@
 @import './colors.scss';
 
+.is-gradient-after:after,
 .is-gradient {
   background: linear-gradient(-45deg, $pink, $purple, $pink, $purple);
   background-size: 400% 400%;
