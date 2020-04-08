@@ -1,4 +1,7 @@
-node_modules
-.next
-out
+.next/
+node_modules/
+/npm-debug.log
+.DS_Store
+out/
+
 *.code-workspace
