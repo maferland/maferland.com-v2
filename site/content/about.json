@@ -1,1 +1,21 @@
-{}
+{
+  "suffixes": "About",
+  "description": "Frontend Engineer with a demonstrated history of working in the software industry. Skilled communicator who shines in analyzing needs and delivering the best product-driven solution. ",
+  "links": [
+    {
+      "title": "Instagram",
+      "icon": "instagram",
+      "url": "https://www.instagram.com/ma.ferland/"
+    },
+    {
+      "title": "Github",
+      "icon": "github",
+      "url": "https://github.com/maferland"
+    },
+    {
+      "title": "Linkedin",
+      "icon": "Linkeding",
+      "url": "https://www.linkedin.com/in/marcantoineferland/"
+    }
+  ]
+}
