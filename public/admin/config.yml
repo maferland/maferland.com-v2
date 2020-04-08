@@ -27,3 +27,20 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'About'
+        name: 'about'
+        file: 'site/content/about.json'
+        fields:
+          - label: Title
+            name: suffixes
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Links
+            name: links
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Icon, name: icon, widget: string }
+              - { label: Url, name: url, widget: string }
