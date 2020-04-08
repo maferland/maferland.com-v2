@@ -1,4 +1,5 @@
 import Layout from '../components/layout';
+import SocialLink from '../components/social-link';
 import AboutContent from '../site/content/about.json';
 import './about.scss';
 
@@ -8,9 +9,7 @@ const About = () => (
       <h1>{AboutContent.title}</h1>
       <p>{AboutContent.description}</p>
       {AboutContent.links.map((link) => (
-        <a key={link.title} href={link.url}>
-          {link.title}
-        </a>
+        <SocialLink key={link.title} {...link} />
       ))}
     </div>
   </Layout>
