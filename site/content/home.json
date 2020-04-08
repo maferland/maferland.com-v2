@@ -4,5 +4,13 @@
     "a remote enthusiast.",
     "a coffee aficionado.",
     "a lifelong learner."
-  ]
+  ],
+  "middle": {
+    "title": "Middle Section Title",
+    "subtitle": "Middle Section Subtitle 👍 oh la la"
+  },
+  "end": {
+    "title": "End Section Title",
+    "subtitle": "End Section Subtitle 👎 si la sol la si"
+  }
 }
