@@ -6,7 +6,9 @@
 }
 
 .fullheight {
-  height: calc(100vh - #{$nav-height});
+  &:first-of-type {
+    height: calc(100vh - #{$nav-height});
+  }
 
   & + & {
     height: 100vh;
@@ -14,6 +16,10 @@
 
   &:last-of-type {
     height: calc(100vh - #{$footer-height});
+  }
+
+  &:first-of-type:last-of-type {
+    height: calc(100vh - #{$nav-height} - #{$footer-height});
   }
 }
 
