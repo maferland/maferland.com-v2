@@ -4,15 +4,14 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: 'Pages'
+    name: 'pages'
     files:
-      - label: "Home"
-        name: "home"
-        file: "site/content/home.md"
+      - label: 'Home'
+        name: 'home'
+        file: 'site/content/home.json'
         fields:
           - label: Suffixes
-            name: suggix
+            name: suffixes
             widget: list
-            fields:
-              - {label: Suffix, name: suffix, widget: string}
+            field: { label: Suffix, name: suffix, widget: string }

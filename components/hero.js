@@ -4,16 +4,6 @@ import './hero.scss';
 
 const prefix = "Hello, I'm ";
 const name = 'Marc-Antoine';
-const suffixes = [
-  'a frontend engineer.',
-  'a remote enthusiast.',
-  'a coffee aficionado.',
-  'a lifelong learner.',
-];
-
-const getRandomSuffixIndex = () => {
-  return Math.floor(Math.random() * suffixes.length);
-};
 
 class Hero extends React.Component {
   constructor(props) {
@@ -30,10 +20,14 @@ class Hero extends React.Component {
     clearInterval(this.interval);
   }
 
+  getRandomSuffixIndex = () => {
+    return Math.floor(Math.random() * this.props.suffixes.length);
+  };
+
   randomizeSuffix() {
     let randomIndex;
     do {
-      randomIndex = getRandomSuffixIndex();
+      randomIndex = this.getRandomSuffixIndex();
     } while (randomIndex === this.state.suffixIndex);
     this.setState({ suffixIndex: randomIndex });
   }
@@ -51,7 +45,7 @@ class Hero extends React.Component {
           &nbsp;
         </span>
 
-        {suffixes.map((suffix, i) => (
+        {this.props.suffixes.map((suffix, i) => (
           <div
             key={`suffix-${i.toString()}`}
             className={`suffix is-gradient-after ${i === this.state.suffixIndex ? 'active' : ''}`}

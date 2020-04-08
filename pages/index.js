@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Controller, Scene } from 'react-scrollmagic';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
+import IndexContent from '../site/content/home.json';
 import './index.scss';
 
 const Index = () => (
@@ -12,7 +13,7 @@ const Index = () => (
 
     <Layout>
       <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-        <Hero className="page fullheight" />
+        <Hero className="page fullheight" suffixes={IndexContent.suffixes} />
         <Scene duration="100%" pin>
           <div className="scene has-pink-background" />
         </Scene>
