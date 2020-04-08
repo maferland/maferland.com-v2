@@ -40,8 +40,8 @@ class Header extends React.Component {
           <HeaderLink href="/blog">
             <a className="link is-mono is-size-5">blog</a>
           </HeaderLink>
-          <HeaderLink href="/contact">
-            <a className="link is-mono is-size-5">contact</a>
+          <HeaderLink href="/about">
+            <a className="link is-mono is-size-5">about</a>
           </HeaderLink>
         </div>
       </div>
