@@ -9,7 +9,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "site/pages/home.md"
+        file: "site/content/home.md"
         fields:
           - label: Suffixes
             name: suggix
