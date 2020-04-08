@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import '../styles/gradient.scss';
 import './hero.scss';
@@ -57,5 +58,7 @@ class Hero extends React.Component {
     );
   }
 }
+
+Hero.propTypes = { suffixes: PropTypes.arrayOf(PropTypes.string).isRequired };
 
 export default Hero;
