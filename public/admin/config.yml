@@ -15,3 +15,15 @@ collections:
             name: suffixes
             widget: list
             field: { label: Suffix, name: suffix, widget: string }
+          - label: Middle
+            name: middle
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+          - label: End
+            name: end
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
