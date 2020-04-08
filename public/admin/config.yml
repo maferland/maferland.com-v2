@@ -32,7 +32,7 @@ collections:
         file: 'site/content/about.json'
         fields:
           - label: Title
-            name: suffixes
+            name: title
             widget: string
           - label: Description
             name: description
