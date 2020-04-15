@@ -65,8 +65,9 @@ $nav-vertical-spacing: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: transform $transition;
+    transition: transform $transition, background-color $transition;
     bottom: 0;
+    transform: translateY(0);
     padding-bottom: 1em;
 
     &.active {
@@ -107,5 +108,4 @@ $nav-vertical-spacing: 10px;
   display: block;
   height: 5px;
   margin: 7px 0;
-  transition: transform $transition;
 }
