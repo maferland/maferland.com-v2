@@ -40,6 +40,9 @@ collections:
           - label: Profile Image
             name: profileImage
             widget: image
+          - label: Profile Alt
+            name: profileAlt
+            widget: text
           - label: Links
             name: links
             widget: list
