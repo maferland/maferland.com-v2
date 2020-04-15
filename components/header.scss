@@ -13,7 +13,8 @@ $nav-vertical-spacing: 10px;
   align-items: center;
   justify-content: space-between;
   width: $page-width;
-  margin: $nav-vertical-spacing auto;
+  margin: auto;
+  padding: $nav-vertical-spacing 0;
   background-color: $white;
 
   @include touch {

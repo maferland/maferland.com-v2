@@ -21,6 +21,10 @@
   &:first-of-type:last-of-type {
     height: calc(100vh - #{$nav-height} - #{$footer-height});
   }
+
+  &.columns {
+    margin-bottom: 0 !important;
+  }
 }
 
 .scene {
