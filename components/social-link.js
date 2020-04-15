@@ -10,7 +10,6 @@ const SocialLink = (props) => {
 };
 
 SocialLink.propTypes = {
-  title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };

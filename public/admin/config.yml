@@ -41,6 +41,5 @@ collections:
             name: links
             widget: list
             fields:
-              - { label: Title, name: title, widget: string }
               - { label: Icon, name: icon, widget: string }
               - { label: Url, name: url, widget: string }

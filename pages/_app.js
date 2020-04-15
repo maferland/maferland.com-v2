@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css';
-import '../styles/font.scss';
+import '../styles/fonts.scss';
 import '../styles/global.scss';
 import '../styles/reset.scss';
 
