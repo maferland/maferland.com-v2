@@ -9,11 +9,15 @@
   &:hover {
     .underline {
       width: calc(100% - #{$header-link-vertical-margin * 2});
+      display: block;
     }
   }
 
   @include touch {
     margin-top: 10px;
+    .underline {
+      display: none;
+    }
   }
 }
 

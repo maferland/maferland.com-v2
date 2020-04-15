@@ -67,9 +67,10 @@ $nav-vertical-spacing: 10px;
     width: 100%;
     transition: transform $transition;
     bottom: 0;
+    padding-bottom: 1em;
 
     &.active {
-      transform: translateY(110px);
+      transform: translateY(calc(110px + 1em));
       background-color: $white;
     }
   }

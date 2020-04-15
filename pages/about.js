@@ -5,12 +5,17 @@ import './about.scss';
 
 const About = () => (
   <Layout>
-    <div className="page fullheight">
-      <h1>{AboutContent.title}</h1>
-      <p>{AboutContent.description}</p>
-      {AboutContent.links.map((link) => (
-        <SocialLink key={link.title} {...link} />
-      ))}
+    <div className="page fullheight columns is-vcentered">
+      <div className="column is-6" />
+      <div className="column is-6 has-text-centered">
+        <h1 className="title is-3">{AboutContent.title}</h1>
+        <p className="subtitle is-4">{AboutContent.description}</p>
+        <div className="is-relative">
+          {AboutContent.links.map((link) => (
+            <SocialLink key={link.icon} {...link} />
+          ))}
+        </div>
+      </div>
     </div>
   </Layout>
 );

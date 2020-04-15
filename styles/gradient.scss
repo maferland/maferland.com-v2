@@ -1,10 +1,60 @@
 @import './colors.scss';
+@import './variables.scss';
 
 .is-gradient-after:after,
 .is-gradient {
   background: linear-gradient(-45deg, $pink, $purple, $pink, $purple);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+}
+
+.icon-gradient {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(-45deg, $pink, $purple, $pink, $purple);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-box {
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  position: relative;
+  padding: 0.75em;
+  box-sizing: border-box;
+
+  $border: 4px;
+  color: $white;
+  background: white;
+  background-clip: padding-box;
+  border: solid $border transparent;
+  border-radius: 8px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    background: linear-gradient(-45deg, $pink, $purple, $pink, $purple);
+    border-radius: inherit;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    opacity: 0;
+    transition: opacity $transition;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 }
 
 @keyframes gradient {

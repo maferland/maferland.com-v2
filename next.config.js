@@ -11,6 +11,10 @@ module.exports = withCSS(
         loader: 'frontmatter-markdown-loader',
         options: { mode: ['react-component'] },
       });
+      config.module.rules.push({
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000',
+      });
       return config;
     },
   }),
