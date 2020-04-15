@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import '../styles/gradient.scss';
 import './hero.scss';
 
 const prefix = "Hello, I'm ";
