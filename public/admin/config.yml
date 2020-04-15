@@ -37,6 +37,9 @@ collections:
           - label: Description
             name: description
             widget: text
+          - label: Profile Image
+            name: profileImage
+            widget: image
           - label: Links
             name: links
             widget: list
