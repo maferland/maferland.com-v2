@@ -1,8 +1,15 @@
 @import './variables.scss';
 
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .page {
   margin: 0 auto;
   width: $page-width;
+  height: 100%;
 }
 
 .fullheight {
