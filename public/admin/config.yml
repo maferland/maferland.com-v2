@@ -49,3 +49,10 @@ collections:
             fields:
               - { label: Icon, name: icon, widget: string }
               - { label: Url, name: url, widget: string }
+      - label: 'Error'
+        name: 'error'
+        file: 'site/content/error.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
