@@ -32,10 +32,6 @@ class Hero extends React.Component {
     this.setState({ suffixIndex: randomIndex });
   }
 
-  changeSuffix() {
-    this.setState({ suffixIndex: 1 });
-  }
-
   render() {
     return (
       <div className={`hero has-text-centered-mobile ${this.props.className} is-mono is-size-2`}>
