@@ -7,11 +7,6 @@ module.exports = withCSS(
     webpack(config) {
       config.resolve.alias['~'] = path.resolve(__dirname);
       config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: { mode: ['react-component'] },
-      });
-      config.module.rules.push({
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=100000',
       });
