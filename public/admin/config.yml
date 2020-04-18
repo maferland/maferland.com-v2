@@ -59,7 +59,8 @@ collections:
   - label: "Blog"
     name: "blog"
     folder: "site/blog"
-    folder: 'assets/content/blog'
+    extension: json
+    format: json
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
