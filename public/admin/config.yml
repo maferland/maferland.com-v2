@@ -49,6 +49,16 @@ collections:
             fields:
               - { label: Icon, name: icon, widget: string }
               - { label: Url, name: url, widget: string }
+      - label: 'Blog'
+        name: 'blog'
+        file: 'site/content/blog.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
       - label: 'Error'
         name: 'error'
         file: 'site/content/error.json'
