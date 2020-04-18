@@ -9,6 +9,9 @@
 .page {
   margin: 0 auto;
   width: $page-width;
+  & > .title {
+    margin-top: 1em;
+  }
 }
 
 .fullheight {
