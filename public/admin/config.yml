@@ -66,16 +66,33 @@ collections:
           - label: Title
             name: title
             widget: string
-  - label: "Blog"
-    name: "blog"
-    folder: "site/blog"
+      - label: 'Portfolio'
+        name: 'portfolio'
+        file: 'site/content/portfolio.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+      - label: 'Error'
+        name: 'error'
+        file: 'site/content/error.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
+  - label: 'Blog'
+    name: 'blog'
+    folder: 'site/blog'
     extension: json
     format: json
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
