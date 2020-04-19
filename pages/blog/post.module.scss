@@ -29,4 +29,8 @@ article {
 
 .header {
   margin: 50px 0;
+
+  @include touch {
+    margin: 25px 0;
+  }
 }

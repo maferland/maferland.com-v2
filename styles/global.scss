@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixin.scss';
 
 #__next {
   height: 100%;
@@ -8,7 +9,11 @@
 
 .page {
   margin: 0 auto;
-  width: $page-width;
+  max-width: $page-width;
+
+  @include touch {
+    padding: 0 1em;
+  }
 }
 
 .fullheight {
