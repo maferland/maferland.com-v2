@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import './variables.scss';
+@import './mixin.scss';
 
 .is-gradient-after:after,
 .is-gradient {
@@ -23,6 +24,10 @@
   position: relative;
   padding: 0.75em;
   box-sizing: border-box;
+
+  @include touch {
+    padding: 0;
+  }
 
   $border: 4px;
   color: $white;

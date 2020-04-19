@@ -9,10 +9,10 @@ const About = () => (
       <div className="column is-3-fullhd is-4-widescreen is-5-desktop is-6-tablet is-8-mobile is-offset-2-mobile">
         <img className="profile-image" src={AboutContent.profileImage} alt={AboutContent.profileAlt} />
       </div>
-      <div className="column is-6 is-offset-1 has-text-centered">
-        <h1 className="title is-3">{AboutContent.title}</h1>
-        <p className="subtitle is-4">{AboutContent.description}</p>
-        <div className="is-relative">
+      <div className="column is-6 is-offset-1 has-text-centered-desktop">
+        <h1 className="title is-size-3-desktop is-size-4-touch">{AboutContent.title}</h1>
+        <p className="subtitle is-size-4-desktop is-size-5-touch">{AboutContent.description}</p>
+        <div className="is-relative has-text-centered">
           {AboutContent.links.map((link) => (
             <SocialLink key={link.icon} {...link} />
           ))}
