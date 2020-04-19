@@ -6,10 +6,10 @@ import './blog.scss';
 
 const Blog = (props) => (
   <Layout>
-    <div className="page fullheight">
+    <div className="page">
       <h1 className="title is-3">{BlogContent.title}</h1>
       <p className="subtitle is-5">{BlogContent.description}</p>
-      <div>
+      <div className="post-links">
         {props.posts.map((post) => (
           <PostLink key={post.slug} {...post} />
         ))}
