@@ -1,4 +1,5 @@
 @import '../styles/variables.scss';
+@import '../styles/mixin.scss';
 
 .post-links {
   display: grid;
@@ -6,4 +7,8 @@
   grid-gap: 1.5em;
   grid-auto-rows: 33%;
   margin-top: 2em;
+
+  @include touch {
+    grid-template-columns: 1fr;
+  }
 }

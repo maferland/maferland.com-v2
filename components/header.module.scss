@@ -4,9 +4,6 @@
 
 $nav-vertical-spacing: 10px;
 
-.header {
-  height: $nav-height;
-}
 .nav {
   display: flex;
   flex-direction: row;
@@ -16,6 +13,8 @@ $nav-vertical-spacing: 10px;
   width: $page-width;
   padding: $nav-vertical-spacing 0;
   background-color: $white;
+  max-height: $nav-height;
+
 
   @include touch {
     position: relative;

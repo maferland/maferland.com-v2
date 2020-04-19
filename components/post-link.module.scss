@@ -1,5 +1,6 @@
 @import '../styles/variables.scss';
 @import '../styles/colors.scss';
+@import '../styles/mixin.scss';
 
 .post-link {
   width: 100%;
@@ -9,6 +10,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include touch {
+    flex-direction: column;
+    height: 170px;
+
+    .cta {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
 
   border: 2px solid $black;
   border-radius: 1em;
