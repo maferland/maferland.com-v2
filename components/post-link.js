@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Icon from './icon';
-import './post-link.scss';
+import './post-link.module.scss';
 
 const BlogThumbnail = (props) => {
   return (

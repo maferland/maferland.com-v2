@@ -1,9 +1,9 @@
 import Layout from '../components/layout';
-import './portfolio.scss';
+import './portfolio.module.scss';
 
 const Portfolio = () => (
   <Layout>
-    <div className="page fullheight">Portfolio</div>
+    <div className="page">Portfolio</div>
   </Layout>
 );
 

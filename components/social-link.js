@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Icon from './icon';
-import './social-link.scss';
+import './social-link.module.scss';
 
 const SocialLink = (props) => {
   return (

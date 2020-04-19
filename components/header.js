@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import HeaderLink from './header-link';
-import './header.scss';
+import './header.module.scss';
 
 class Header extends React.Component {
   constructor(props) {
@@ -24,11 +24,7 @@ class Header extends React.Component {
             <a className="is-mono is-size-3">maferland</a>
           </Link>
           {/* TODO Fix A11y issues (see .eslintrc) */}
-          <div
-            role="button"
-            className={`burger ${this.state.active ? 'active' : ''}`}
-            onClick={this.toggle}
-          >
+          <div role="button" className={`burger ${this.state.active ? 'active' : ''}`} onClick={this.toggle}>
             <div />
           </div>
         </div>

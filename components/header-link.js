@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import './header-link.scss';
+import './header-link.module.scss';
 
 const HeaderLink = ({ href, children }) => {
   const router = useRouter();

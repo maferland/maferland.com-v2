@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
 import SocialLink from '../components/social-link';
 import AboutContent from '../site/content/about.json';
-import './about.scss';
+import './about.module.scss';
 
 const About = () => (
   <Layout>

@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import PostLink from '../components/post-link';
 import { getPosts } from '../services/cms';
 import BlogContent from '../site/content/blog.json';
-import './blog.scss';
+import './blog.module.scss';
 
 const Blog = (props) => (
   <Layout>

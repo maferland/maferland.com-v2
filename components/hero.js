@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import './hero.scss';
+import './hero.module.scss';
 
 const prefix = "Hello, I'm ";
 const name = 'Marc-Antoine';

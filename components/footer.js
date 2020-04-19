@@ -1,4 +1,4 @@
-import './footer.scss';
+import './footer.module.scss';
 
 const year = new Date().getFullYear();
 const footerMessage = `© Built with <3 by maferland - ${year}`;

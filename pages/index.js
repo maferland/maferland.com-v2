@@ -3,7 +3,7 @@ import Hero from '../components/hero';
 import HomeSection from '../components/home-section';
 import Layout from '../components/layout';
 import IndexContent from '../site/content/home.json';
-import './index.scss';
+import './index.module.scss';
 
 const Index = () => (
   <Layout>

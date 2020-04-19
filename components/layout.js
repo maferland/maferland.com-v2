@@ -1,6 +1,6 @@
 import Footer from './footer';
 import Header from './header';
-import './layout.scss';
+import './layout.module.scss';
 
 const Layout = (props) => {
   return (

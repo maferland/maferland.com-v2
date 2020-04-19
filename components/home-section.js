@@ -1,4 +1,4 @@
-import './home-section.scss';
+import './home-section.module.scss';
 
 const HomeSection = (props) => {
   return (
