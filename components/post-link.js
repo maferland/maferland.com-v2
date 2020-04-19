@@ -5,7 +5,7 @@ import './post-link.module.scss';
 
 const BlogThumbnail = (props) => {
   return (
-    <Link href={`/post/${props.slug}`}>
+    <Link href={`/blog/${props.slug}`}>
       <a className="post-link">
         <div>
           <h2 className="title is-4 is-mono">{props.title}</h2>
