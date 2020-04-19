@@ -6,7 +6,7 @@ import './about.module.scss';
 const About = () => (
   <Layout>
     <div className="page columns is-vcentered is-centered">
-      <div className="column is-3-fullhd is-4-widescreen is-5-desktop is-6-tablet is-8-mobile is-offset-2-mobile">
+      <div className="column is-4-widescreen is-5-desktop is-6-tablet is-8-mobile is-offset-2-mobile">
         <img className="profile-image" src={AboutContent.profileImage} alt={AboutContent.profileAlt} />
       </div>
       <div className="column is-6 is-offset-1 has-text-centered-desktop">
