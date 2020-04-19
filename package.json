@@ -21,7 +21,6 @@
     "markdown-to-jsx": "^6.11.1",
     "moment": "^2.24.0",
     "next": "^9.3.2",
-    "next-purgecss": "^4.0.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
