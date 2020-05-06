@@ -16,7 +16,6 @@ $nav-vertical-spacing: 10px;
   background-color: $white;
   max-height: $nav-height;
 
-
   @include touch {
     position: relative;
     margin-top: 0;
@@ -44,10 +43,16 @@ $nav-vertical-spacing: 10px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  max-height: $nav-height;
 
   @include touch {
     background-color: $white;
     z-index: 10;
+  }
+
+  a,
+  img {
+    max-height: $nav-height;
   }
 }
 

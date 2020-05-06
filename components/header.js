@@ -21,7 +21,9 @@ class Header extends React.Component {
       <div className="nav">
         <div className="brand">
           <Link href="/">
-            <a className="is-mono is-size-3">maferland</a>
+            <a className="is-mono is-size-3">
+              <img src="/img/maferland-brand.png" height="68px" alt="maferland logo" />
+            </a>
           </Link>
           {/* TODO Fix A11y issues (see .eslintrc) */}
           <div role="button" className={`burger ${this.state.active ? 'active' : ''}`} onClick={this.toggle}>
