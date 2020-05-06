@@ -45,4 +45,8 @@
   .cta i {
     margin-left: 10px;
   }
+
+  &:last-of-type {
+    margin-bottom: 1em;
+  }
 }

@@ -9,7 +9,6 @@ $suffix-padding: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 5px;
 
   @include until-widescreen {
     flex-direction: column;
