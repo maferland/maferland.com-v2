@@ -5,3 +5,4 @@ node_modules/
 out/
 
 *.code-workspace
+public/_redirects
