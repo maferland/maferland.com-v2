@@ -3,23 +3,38 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
+import ProgressiveImage from '../../components/progressive-image';
 import { getPost, getPosts } from '../../services/cms';
 import './post.module.scss';
 
+const wordsPerMinute = 200; // Average case.
+
+const getReadingTime = (body) => {
+  const textLength = body.split(' ').length; // Split by words
+  return textLength > 0 ? Math.ceil(textLength / wordsPerMinute) : '';
+};
+
 const Post = (props) => {
-  const date = moment().format('MMMM Do YYYY');
+  const date = moment(props.date).format('MMMM Do YYYY');
+  const readingTime = getReadingTime(props.body);
   return (
     <>
       <Meta title={props.title} description={props.description} />
       <Layout>
         <div className="page">
-          <div className="header">
-            <h1 className="title is-3">{props.title}</h1>
-            <p className="subtitle is-5">{props.description}</p>
-            <p className="date">{date}</p>
-          </div>
           <article>
-            <Markdown>{props.body}</Markdown>
+            <div className="header">
+              <span>
+                <h1 className="title is-3">{props.title}</h1>
+                <p className="subtitle is-5">{props.description}</p>
+              </span>
+              <span style={{ textAlign: 'right' }}>
+                <p>{`${readingTime} min read`}</p>
+                <p className="date">{date}</p>
+              </span>
+            </div>
+            <ProgressiveImage image={props.image} style={{ width: '100%', height: 'auto', marginBottom: '25px' }} />
+            <Markdown className="body">{props.body}</Markdown>
           </article>
         </div>
       </Layout>

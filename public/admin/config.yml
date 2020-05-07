@@ -93,6 +93,11 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured Image', name: 'image', widget: 'image' }
+      - label: Featured Image
+        name: image
+        widget: object
+        fields:
+          - { label: Image, name: url, widget: image }
+          - { label: Alt, name: alt, widget: string }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
