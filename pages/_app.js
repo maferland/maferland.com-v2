@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <Meta title={title} description={description} />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
@@ -22,6 +21,7 @@ export default function App({ Component, pageProps }) {
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         <script async defer data-domain="maferland.com" src="https://plausible.io/js/plausible.js" />
       </Head>
+      <Meta title={title} description={description} />
       <Component {...pageProps} />
     </>
   );
