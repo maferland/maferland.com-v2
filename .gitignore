@@ -6,3 +6,6 @@ out/
 
 *.code-workspace
 public/_redirects
+
+# Local Netlify folder
+.netlify
