@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
         <link rel="manifest" href="/icons/site.webmanifest" />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+        <script async defer data-domain="maferland.com" src="https://plausible.io/js/plausible.js" />
       </Head>
       <Component {...pageProps} />
     </>
