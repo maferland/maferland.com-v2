@@ -12,7 +12,7 @@ const ProgressiveImage = ({ image, style = '', className = '' }) => {
   console.log('paint');
   return (
     <div style={{ ...style }} className="progressive-image is-relative">
-      <img className={className.trim()} alt={image.alt} onLoad={() => handleLoad()} src={highResUrl} />
+      <img className={className.trim()} alt={image.alt} onLoad={handleLoad} src={highResUrl} />
       <img
         className={`${className} overlay ${highResImageLoaded ? 'hidden' : ''}`.trim()}
         alt={image.alt}
