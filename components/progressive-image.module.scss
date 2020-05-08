@@ -1,6 +1,6 @@
 .overlay {
   position: absolute;
-  filter: blur(10px);
+  filter: blur(1px);
   transition: opacity ease-in 1000ms;
   clip-path: inset(0);
   top: 0;
