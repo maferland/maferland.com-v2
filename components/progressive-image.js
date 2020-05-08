@@ -7,10 +7,9 @@ const ProgressiveImage = ({ image, style = '', className = '' }) => {
   const highResUrl = `${image.url}?nf_resize=fit&w=1200`;
   const handleLoad = () => setHighResImageLoaded(true);
   return (
-    <div className="is-relative">
-      <img style={{ ...style }} className={className} alt={image.alt} onLoad={() => handleLoad()} src={highResUrl} />
+    <div style={style} className="is-relative">
+      <img className={className} alt={image.alt} onLoad={() => handleLoad()} src={highResUrl} />
       <img
-        style={{ ...style }}
         className={`${className} overlay`}
         alt={image.alt}
         {...(highResImageLoaded && { style: { opacity: '0' } })}
