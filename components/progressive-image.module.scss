@@ -1,0 +1,8 @@
+.overlay {
+  position: absolute;
+  filter: blur(10px);
+  transition: opacity ease-in 1000ms;
+  clip-path: inset(0);
+  top: 0;
+  right: 0;
+}
