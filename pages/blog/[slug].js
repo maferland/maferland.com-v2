@@ -3,7 +3,6 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
-import ProgressiveImage from '../../components/progressive-image';
 import { getPost, getPosts } from '../../services/cms';
 import './post.module.scss';
 
@@ -33,7 +32,11 @@ const Post = (props) => {
                 <p className="date">{date}</p>
               </span>
             </div>
-            <ProgressiveImage image={props.image} style={{ width: '100%', height: 'auto', marginBottom: '25px' }} />
+            <img
+              src={props.image.url}
+              alt={props.image.alt}
+              style={{ width: '100%', height: 'auto', marginBottom: '25px' }}
+            />
             <Markdown className="body">{props.body}</Markdown>
           </article>
         </div>
