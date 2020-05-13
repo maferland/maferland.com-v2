@@ -11,7 +11,8 @@
     "export": "yarn run build && next export",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "fix": "eslint --fix --ext .js --ignore-path .gitignore .",
-    "shorten": "netlify-shortener"
+    "shorten": "netlify-shortener",
+    "deploy": "yarn export && netlify deploy"
   },
   "keywords": [],
   "author": "",
