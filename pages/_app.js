@@ -18,8 +18,6 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
         <link rel="manifest" href="/icons/site.webmanifest" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-        <script async defer data-domain="maferland.com" src="https://stats.maferland.com/js/index.js" />
       </Head>
       <Meta title={title} description={description} />
       <Component {...pageProps} />
