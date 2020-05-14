@@ -9,7 +9,7 @@ const BlogThumbnail = (props) => {
       <a className="post-link">
         <div>
           <h2 className="title is-4 is-mono">{props.title}</h2>
-          <p className="subtitle is-5">{props.description}</p>
+          <p className="subtitle is-5">{props.subtitle}</p>
         </div>
         <div className="cta">
           READ IT

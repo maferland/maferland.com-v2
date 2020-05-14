@@ -1,5 +1,6 @@
 import Markdown from 'markdown-to-jsx';
 import moment from 'moment';
+import 'prismjs';
 import PropTypes from 'prop-types';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
@@ -23,7 +24,7 @@ const Post = (props) => {
         <div className="page">
           <article>
             <div className="header">
-              <span>
+              <span style={{ width: '80%' }}>
                 <h1 className="title is-3">{props.title}</h1>
                 <p className="subtitle is-5">{props.description}</p>
               </span>

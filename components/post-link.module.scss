@@ -11,6 +11,11 @@
   justify-content: space-between;
   align-items: center;
 
+  .cta {
+    white-space: nowrap;
+    margin-left: 1em;
+  }
+
   @include touch {
     flex-direction: column;
     height: 170px;

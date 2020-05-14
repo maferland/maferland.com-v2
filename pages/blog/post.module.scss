@@ -14,12 +14,34 @@ article .body {
     font-size: 1.2em;
   }
 
+  h1,
+  h2,
+  h3 {
+    font-weight: bold;
+  }
+
   * + {
     h1,
     h2,
     h3 {
       margin-top: 0.75em;
     }
+  }
+
+  p + p {
+    margin-top: 0.25em;
+  }
+
+  img {
+    margin: 1em;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  pre {
+    margin: 1.5em;
+    white-space: pre-wrap;
+    overflow-x: auto;
   }
 
   @include mobile {
