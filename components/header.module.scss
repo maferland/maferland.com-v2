@@ -67,18 +67,24 @@ $nav-vertical-spacing: 10px;
   align-items: center;
 
   @include touch {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    width: 100%;
     transition: transform $transition, background-color $transition;
-    bottom: 0;
-    transform: translateY(0);
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-200px);
     padding-bottom: 1em;
+    padding-top: 75px;
 
     &.active {
-      transform: translateY(calc(110px + 1em));
+      transform: translateY(0);
       background-color: $white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-top-color: $white;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
     }
   }
 }
