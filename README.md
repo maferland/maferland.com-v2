@@ -4,12 +4,6 @@
 
 Marc-Antoine Ferland's personal website powered by Next.js, React, and Node.js.
 
-## Acknowledgements
-
-- Ruben Harutyunyan - [Gatsby Advanced Starter](https://github.com/vagr9k/gatsby-advanced-starter/)
-- Muhammad Muhsin - [Using React Context API with Gatsby](https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/)
-- Thomas Frössman - [ExitWP](https://github.com/thomasf/exitwp) - WordPress XML to Markdown
-
 ## Author
 
 - [Marc-Antoine Ferland](https://maferland.com)
