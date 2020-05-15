@@ -1,4 +1,5 @@
 import Layout from '../components/layout';
+import ProfileImage from '../components/profile-image';
 import SocialLink from '../components/social-link';
 import AboutContent from '../site/content/about.json';
 import './about.module.scss';
@@ -7,7 +8,11 @@ const About = () => (
   <Layout>
     <div className="page columns is-vcentered is-centered">
       <div className="column is-4-widescreen is-5-desktop is-6-tablet is-8-mobile is-offset-2-mobile">
-        <img className="profile-image" src={AboutContent.profileImage} alt={AboutContent.profileAlt} />
+        <ProfileImage
+          image={AboutContent.profileImage}
+          underImage={AboutContent.underProfileImage}
+          alt={AboutContent.profileAlt}
+        />
       </div>
       <div className="column is-6 is-offset-1 has-text-centered-desktop">
         <h1 className="title is-size-3-desktop is-size-4-touch">{AboutContent.title}</h1>

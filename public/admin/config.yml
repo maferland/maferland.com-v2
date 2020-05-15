@@ -43,6 +43,9 @@ collections:
           - label: Profile Image
             name: profileImage
             widget: image
+          - label: Under Profile Image
+            name: underProfileImage
+            widget: image
           - label: Profile Alt
             name: profileAlt
             widget: text
