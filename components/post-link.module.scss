@@ -17,14 +17,23 @@
   }
 
   @include touch {
-    flex-direction: column;
+    flex-direction: row;
     height: 170px;
+    justify-content: center;
 
     .cta {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    .cta {
+      margin-top: 1em;
+      margin-left: auto;
     }
   }
 

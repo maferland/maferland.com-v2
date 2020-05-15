@@ -1,6 +1,10 @@
 @import '../styles/variables.scss';
 @import '../styles/mixin.scss';
 
+.page {
+  padding: 0 1em;
+}
+
 .post-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
