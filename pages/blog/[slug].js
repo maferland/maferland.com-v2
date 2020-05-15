@@ -24,7 +24,7 @@ const Post = (props) => {
         <div className="page">
           <article>
             <div className="header">
-              <span style={{ width: '80%' }}>
+              <span className="header-content">
                 <h1 className="title is-3">{props.title}</h1>
                 <p className="subtitle is-5">{props.description}</p>
               </span>

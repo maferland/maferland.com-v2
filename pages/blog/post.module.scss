@@ -55,7 +55,16 @@ article .body {
   justify-content: space-between;
   align-items: flex-end;
 
+  .header-content {
+    width: 80%;
+  }
+
   @include touch {
     margin: 25px 0;
+    flex-direction: column;
+
+    .header-content {
+      width: 100%;
+    }
   }
 }
