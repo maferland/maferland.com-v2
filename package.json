@@ -6,7 +6,7 @@
   "baseUrl": "https://maferland.netlify.app",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && cp _redirects public",
     "start": "next start",
     "export": "yarn run build && next export",
     "postexport": "node scripts/postexport.js",
