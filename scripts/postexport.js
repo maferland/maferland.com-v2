@@ -5,8 +5,9 @@ const robotsTxt = `User-agent: *
 Sitemap: https://maferland.com/sitemap.xml
 Disallow:`;
 
-fs.writeFileSync('out/robots.txt', robotsTxt);
-console.log('robots.txt saved!');
+fs.writeFile('out/robots.txt', robotsTxt, () => {
+  console.log('robots.txt saved!');
+});
 
 // SITEMAP.XML
 const paths = ['', '/about', '/blog'];
@@ -38,9 +39,4 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 
 fs.writeFile('out/sitemap.xml', sitemapXml, () => {
   console.log('sitemap.xml saved!');
-});
-
-// copy `_redirects` etc.
-fs.copyFile('_redirects', 'out/', () => {
-  console.log('_redirects copied!');
 });
