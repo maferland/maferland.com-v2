@@ -29,7 +29,7 @@ article .body {
   }
 
   p + p {
-    margin-top: 0.25em;
+    margin-top: var(--spacing-m);
   }
 
   img {
@@ -42,6 +42,28 @@ article .body {
     margin: 1.5em;
     white-space: pre-wrap;
     overflow-x: auto;
+  }
+
+  ol,
+  ul {
+    margin: var(--spacing-s);
+    li {
+      margin-left: var(--spacing-l);
+    }
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  blockquote {
+    margin: var(--spacing-m);
+    padding: var(--spacing-xs) var(--spacing-s);
+    border-left: solid 3px lightblue;
   }
 
   @include mobile {
