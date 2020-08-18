@@ -1,6 +1,5 @@
 import Markdown from 'markdown-to-jsx';
 import moment from 'moment';
-import 'prismjs';
 import PropTypes from 'prop-types';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
