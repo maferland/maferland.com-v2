@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1.5em;
-  margin-top: 2em;
+  margin-top: 1.5em;
 
   @include touch {
     grid-template-columns: 1fr;
