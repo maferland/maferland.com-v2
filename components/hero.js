@@ -1,58 +1,55 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './hero.module.scss';
 
 const prefix = "Hello, I'm ";
 const name = 'Marc-Antoine';
 
-class Hero extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { suffixIndex: undefined };
-  }
+const useInterval = (callback, delay) => {
+  const savedCallback = useRef();
 
-  componentDidMount() {
-    this.setState({ suffixIndex: 0 });
-    this.interval = setInterval(() => this.randomizeSuffix(), 3000);
-  }
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+  // Set up the interval.
+  useEffect(() => {
+    if (delay === null) {
+      return () => {};
+    }
+    const id = setInterval(() => savedCallback.current(), delay);
+    return () => clearInterval(id);
+  }, [delay]);
+};
 
-  getRandomSuffixIndex = () => {
-    return Math.floor(Math.random() * this.props.suffixes.length);
-  };
+const Hero = (props) => {
+  const [suffixIndex, setSuffixIndex] = useState(0);
 
-  randomizeSuffix() {
+  useInterval(() => {
     let randomIndex;
     do {
-      randomIndex = this.getRandomSuffixIndex();
-    } while (randomIndex === this.state.suffixIndex);
-    this.setState({ suffixIndex: randomIndex });
-  }
+      randomIndex = Math.floor(Math.random() * props.suffixes.length);
+    } while (randomIndex === suffixIndex);
+    setSuffixIndex(randomIndex);
+  }, 3000);
 
-  render() {
-    return (
-      <div className={`hero has-text-centered-mobile ${this.props.className} is-mono is-size-2`}>
-        <span>
-          {prefix}
-          <nobr>{name}</nobr>
-          &nbsp;
-        </span>
+  return (
+    <div className={`hero has-text-centered-mobile ${props.className} is-mono is-size-2`}>
+      <span>
+        {prefix}
+        <nobr>{name}</nobr>
+        &nbsp;
+      </span>
 
-        {this.props.suffixes.map((suffix, i) => (
-          <div
-            key={`suffix-${i.toString()}`}
-            className={`suffix is-gradient-after ${i === this.state.suffixIndex ? 'active' : ''}`}
-          >
-            {suffix}
-          </div>
-        ))}
-      </div>
-    );
-  }
-}
+      {props.suffixes.map((suffix, i) => (
+        <div key={`suffix-${i.toString()}`} className={`suffix is-gradient-after ${i === suffixIndex ? 'active' : ''}`}>
+          {suffix}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 Hero.propTypes = { suffixes: PropTypes.arrayOf(PropTypes.string).isRequired };
 
