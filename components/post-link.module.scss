@@ -2,9 +2,18 @@
 @import '../styles/colors.scss';
 @import '../styles/mixin.scss';
 
+:root {
+  --post-link-height: 150px;
+  @include touch {
+    --post-link-height: 170px;
+  }
+}
+
 .post-link {
+  --height: 150px;
   width: 100%;
-  min-height: 150px;
+  min-height: var(--post-link-height);
+  max-height: var(--post-link-height);
   position: relative;
 
   display: flex;
@@ -18,8 +27,7 @@
 
   @include touch {
     flex-direction: row;
-    min-height: 170px;
-    justify-content: center;
+    justify-content: space-between;
 
     .cta {
       display: flex;
