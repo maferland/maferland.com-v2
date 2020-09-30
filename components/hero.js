@@ -1,27 +1,10 @@
 import PropTypes from 'prop-types';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './hero.module.scss';
+import { useInterval } from '@maferland/hooks';
 
 const prefix = "Hello, I'm ";
 const name = 'Marc-Antoine';
-
-const useInterval = (callback, delay) => {
-  const savedCallback = useRef();
-
-  // Remember the latest callback.
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  // Set up the interval.
-  useEffect(() => {
-    if (delay === null) {
-      return () => {};
-    }
-    const id = setInterval(() => savedCallback.current(), delay);
-    return () => clearInterval(id);
-  }, [delay]);
-};
 
 const Hero = (props) => {
   const [suffixIndex, setSuffixIndex] = useState(0);

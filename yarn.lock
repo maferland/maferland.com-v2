@@ -1020,6 +1020,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@maferland/hooks@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@maferland/hooks/-/hooks-0.1.0.tgz#92777cf39d44dc69cb76ec099cbf32d76b02ecf6"
+  integrity sha512-HNNMPAAtbve5zH0ViHQ/muOnW2zbomeZQq6cREycE8nXMOArl8xcu3KeTGlMSWqN0+u515PwHhC3txf3WJU3qA==
+
 "@next/bundle-analyzer@^9.5.2":
   version "9.5.2"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-9.5.2.tgz#9a04a915d2095121688028f5164016d6e1ba8433"
