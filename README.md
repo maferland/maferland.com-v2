@@ -1,14 +1,25 @@
-# Hello !
-I'm Marc-Antoine a Frontend Engineer working remotely @Fizzer!
+<div align="center">
+<h1>💈 maferland.com</h1>
 
-This also happen to be the repo of my personal website 🙃
+<p>Marc-Antoine Ferland's personal website powered by Next.js + NetlifyCms</p>
+</div>
 
-# maferland.com
+---
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/26bd2060-10dd-425f-a388-80e12ba4ef8b/deploy-status)](https://app.netlify.com/sites/maferland/deploys)
 
-Marc-Antoine Ferland's personal website powered by Next.js + NetlifyCms
+## Installation
+
+```
+npm run dev
+// or
+yarn dev
+```
 
 ## Author
 
 - [Marc-Antoine Ferland](https://maferland.com)
+
+## LICENSE
+
+[MIT](LICENSE)
