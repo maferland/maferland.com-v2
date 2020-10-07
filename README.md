@@ -1,7 +1,7 @@
 <div align="center">
 <h1>💈 maferland.com</h1>
 
-<p>Marc-Antoine Ferland's personal website powered by Next.js + NetlifyCms</p>
+<p>Marc-Antoine Ferland's personal website powered by Next.js + NetlifyCMS</p>
 </div>
 
 ---
