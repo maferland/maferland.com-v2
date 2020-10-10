@@ -63,5 +63,9 @@
       "pretty-quick — staged",
       "git add *.js"
     ]
+  },
+  "volta": {
+    "node": "12.19.0",
+    "yarn": "1.22.10"
   }
 }
