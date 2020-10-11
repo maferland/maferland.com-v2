@@ -23,5 +23,6 @@
     "jsx-a11y/interactive-supports-focus": ["off"],
     "no-return-assign": ["off"],
     "no-param-reassign": ["off"]
-  }
+  },
+  "plugins": ["emotion"]
 }
