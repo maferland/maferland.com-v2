@@ -1,3 +1,9 @@
 @import '~bulma/sass/utilities/initial-variables';
 @import '~bulma/sass/utilities/derived-variables';
 @import '~bulma/sass/utilities/mixins';
+
+@mixin _touch {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}

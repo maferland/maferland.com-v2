@@ -2,48 +2,63 @@
 @import '../styles/variables.scss';
 @import '../styles/mixin.scss';
 
-$suffix-padding: 5px;
-
-.hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-
-  @include until-widescreen {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
 .suffix {
-  display: none;
-  padding: 0 5px;
-  white-space: break-spaces;
-  position: relative;
-
-  &:after {
-    content: '';
-    height: $underline-height;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
+  position: absolute;
+  bottom: -200px;
 
   &.active {
-    display: block;
-    &::after {
-      animation: timer 3s ease-out 1;
+    animation: vertical-show 3s ease-out 1;
+
+    @include _touch {
+      animation: horizontal-show 3s ease-out 1;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      left: -800px;
     }
   }
 }
 
-@keyframes timer {
+@keyframes horizontal-show {
   0% {
-    width: 100%;
+    left: -800px;
+    opacity: 0;
+  }
+  20% {
+    left: 50px;
+  }
+  30% {
+    left: 0;
+    opacity: 1;
+  }
+  95% {
+    left: 0;
+    opacity: 1;
   }
   100% {
-    width: 0;
+    left: 800px;
+    opacity: 0;
+  }
+}
+
+@keyframes vertical-show {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  20% {
+    bottom: calc(50% + 10px);
+  }
+  30% {
+    bottom: calc(50% - 30px);
+    opacity: 1;
+  }
+  95% {
+    bottom: calc(50% - 30px);
+    opacity: 1;
+  }
+  100% {
+    bottom: 200px;
+    opacity: 0;
   }
 }
