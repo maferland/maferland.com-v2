@@ -1,6 +1,7 @@
 import Markdown from 'markdown-to-jsx';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
 import { getPost, getPosts } from '../../services/cms';
