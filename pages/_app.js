@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css';
 import Head from 'next/head';
+import React from 'react';
 import Meta from '../components/meta';
 import '../styles/fonts.scss';
 import '../styles/global.scss';
