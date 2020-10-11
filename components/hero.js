@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { useInterval } from '@maferland/hooks';
 import facepaint from 'facepaint';
 import PropTypes from 'prop-types';
@@ -36,17 +34,18 @@ const Hero = (props) => {
         css={mq({
           display: 'flex',
           width: ['100%', '1000px'],
+          height: ['', '100%'],
           overflow: 'hidden',
           flexDirection: ['', 'column'],
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: ['center'],
         })}
       >
         <div
           css={mq({
-            whiteSpace: 'nowrap',
-            margin: ['3em 0', '1.75em 0'],
-            padding: ['', '0 300px'],
+            whiteSpace: ['nowrap', 'break-spaces'],
+            margin: ['3em 0', '0'],
+            marginTop: ['', '-50%'],
           })}
         >
           {prefix}

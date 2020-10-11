@@ -5,16 +5,19 @@
 .suffix {
   position: absolute;
   bottom: -200px;
+  width: 100%;
+
+  @include _touch {
+    top: 100%;
+    left: -800px;
+    text-align: center;
+  }
 
   &.active {
     animation: vertical-show 3s ease-out 1;
 
     @include _touch {
       animation: horizontal-show 3s ease-out 1;
-      bottom: 0;
-      text-align: center;
-      width: 100%;
-      left: -800px;
     }
   }
 }
