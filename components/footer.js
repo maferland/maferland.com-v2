@@ -5,7 +5,7 @@ const footerMessage = `© Built with <3 by maferland - ${year}`;
 
 const Footer = () => {
   return (
-    <div className="footer is-size-6 has-text-centered is-mono is-gradient">
+    <div className="footer is-size-6 has-text-centered is-mono is-gradient" css={{ zIndex: 10 }}>
       <span>{footerMessage}</span>
     </div>
   );
