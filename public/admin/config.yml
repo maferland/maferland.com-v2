@@ -73,6 +73,9 @@ collections:
           - label: Description
             name: description
             widget: text
+          - label: CTA
+            name: cta
+            widget: text
       - label: 'Error'
         name: 'error'
         file: 'site/content/error.json'
