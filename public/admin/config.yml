@@ -63,6 +63,16 @@ collections:
           - label: Description
             name: description
             widget: text
+      - label: 'Projects'
+        name: 'projects'
+        file: 'site/content/projects.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
       - label: 'Error'
         name: 'error'
         file: 'site/content/error.json'
@@ -105,3 +115,14 @@ collections:
           - { label: Alt, name: alt, widget: string }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: 'Projects'
+    name: 'projects'
+    folder: 'site/projects'
+    extension: json
+    format: json
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Link', name: 'link', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }

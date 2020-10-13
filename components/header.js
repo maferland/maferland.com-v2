@@ -32,6 +32,9 @@ class Header extends React.Component {
         </div>
 
         <div className={`links ${this.state.active ? 'active' : ''}`}>
+          <HeaderLink href="/projects">
+            <a className="link is-mono is-size-5">projects</a>
+          </HeaderLink>
           <HeaderLink href="/blog">
             <a className="link is-mono is-size-5">blog</a>
           </HeaderLink>

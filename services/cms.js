@@ -11,4 +11,12 @@ const getPost = async (slug) => {
   return posts.find((post) => post.slug === slug);
 };
 
-export { getPosts, getPost };
+const getProjects = async () => {
+  const files = await require.context('~/site/projects', false, /\.json$/);
+  return files
+    .keys()
+    .map((key) => files(key))
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+};
+
+export { getProjects, getPosts, getPost };
