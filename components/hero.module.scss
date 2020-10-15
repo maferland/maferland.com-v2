@@ -5,6 +5,7 @@
 .suffix {
   position: absolute;
   bottom: -200px;
+  opacity: 0;
   width: 100%;
 
   @include _touch {
