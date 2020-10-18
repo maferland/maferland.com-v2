@@ -76,6 +76,12 @@ collections:
           - label: CTA
             name: cta
             widget: text
+          - label: Github
+            name: github
+            widget: text
+          - label: Spotify
+            name: spotify
+            widget: text
       - label: 'Error'
         name: 'error'
         file: 'site/content/error.json'
