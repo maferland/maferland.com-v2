@@ -41,8 +41,8 @@ const Projects = ({ projects }) => (
         </div>
 
         <div>
-          <h2 className="subtitle is-3">{ProjectsContent.spotify}</h2>
-          <div>Comming soon</div>
+          <h2 className="subtitle is-3">{ProjectsContent.npm}</h2>
+          <p>Coming soon</p>
         </div>
       </div>
     </div>

@@ -79,8 +79,8 @@ collections:
           - label: Github
             name: github
             widget: text
-          - label: Spotify
-            name: spotify
+          - label: NPM
+            name: npm
             widget: text
       - label: 'Error'
         name: 'error'
