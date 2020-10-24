@@ -1151,6 +1151,14 @@
   resolved "https://registry.yarnpkg.com/@maferland/hooks/-/hooks-0.1.1.tgz#e1cb84adbe2a23f635bb4d45140502d6152c983a"
   integrity sha512-Pgqo7kwR7JahvhEef83FyBaXMjlxc+E5+nya1p8lU2pIQUZggC3Cv1sPt4098HbIzVTJIw8TtZE5LPvPkTedng==
 
+"@maferland/spotify-react@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@maferland/spotify-react/-/spotify-react-0.2.0.tgz#0b477c39b20b0aabbd8445a662c4f6725768ee42"
+  integrity sha512-1Eace0WU7MSuX7JjvmeIvoPzb8Mfi1S2aZcSAGvZrFWvB5j0JLnITxxREnCnEAVkS+9EQEwWoE9/CENH8Sc28A==
+  dependencies:
+    isomorphic-fetch "^3.0.0"
+    react-query "^2.25.2"
+
 "@next/bundle-analyzer@^9.5.2":
   version "9.5.5"
   resolved "https://registry.yarnpkg.com/@next/bundle-analyzer/-/bundle-analyzer-9.5.5.tgz#9cb5f67e8d3012ccfb87c10f20715fb7f918dd66"
@@ -6558,6 +6566,13 @@ react-query@^2.23.1:
   version "2.23.1"
   resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.23.1.tgz#7d676f56d3c6e96b4de4d0b178baf6bb6a0ec272"
   integrity sha512-qIma0Kvr//LWgWFah7RcntvD4FurXXdQaQeIfqhCWKdhihhe3Xs5BHsljAP68jo719/+xhWxL3I96SvrU4gGHA==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
+react-query@^2.25.2:
+  version "2.25.2"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.25.2.tgz#afefdf57a166bcbf08c93a26522a8c6cb1bdf849"
+  integrity sha512-GIz75WlRAzJ+wKos9VPw6PMAB3FqGmB2lHtRZlvKKByurlMNHa5rOFPz4WCYGWsPBSk7m6FHWrkK9aItDrP2mw==
   dependencies:
     "@babel/runtime" "^7.5.5"
 
