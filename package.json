@@ -24,7 +24,7 @@
     "@emotion/core": "^10.0.35",
     "@maferland/github-activity": "^0.2.4",
     "@maferland/hooks": "^0.1.0",
-    "@maferland/spotify-react": "^0.2.0",
+    "@maferland/spotify-react": "^0.3.0",
     "@next/bundle-analyzer": "^9.5.2",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",

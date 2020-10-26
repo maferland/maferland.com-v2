@@ -4,6 +4,8 @@
   "profileImage": "/img/maferland.jpg",
   "underProfileImage": "/img/cartoon-maferland.jpeg",
   "profileAlt": "Marc-Antoine Ferland",
+  "spotifyTitle": "Spotify Activity",
+  "spotifyDescription": "The last 10 tracks I have listened",
   "links": [
     {
       "icon": "instagram",

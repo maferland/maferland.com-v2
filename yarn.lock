@@ -1151,10 +1151,10 @@
   resolved "https://registry.yarnpkg.com/@maferland/hooks/-/hooks-0.1.1.tgz#e1cb84adbe2a23f635bb4d45140502d6152c983a"
   integrity sha512-Pgqo7kwR7JahvhEef83FyBaXMjlxc+E5+nya1p8lU2pIQUZggC3Cv1sPt4098HbIzVTJIw8TtZE5LPvPkTedng==
 
-"@maferland/spotify-react@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@maferland/spotify-react/-/spotify-react-0.2.0.tgz#0b477c39b20b0aabbd8445a662c4f6725768ee42"
-  integrity sha512-1Eace0WU7MSuX7JjvmeIvoPzb8Mfi1S2aZcSAGvZrFWvB5j0JLnITxxREnCnEAVkS+9EQEwWoE9/CENH8Sc28A==
+"@maferland/spotify-react@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@maferland/spotify-react/-/spotify-react-0.3.0.tgz#19144b8bad8f1911b1526ea325551dfa0c98f6a5"
+  integrity sha512-FeIMRjBhIVjNS1mf/ETeeZwkkd+ZHGnbRFmccwTSXx1u/RZZFJFe2Y8/YfY0j81ev+p3+gUAzErdnRP57iy+bA==
   dependencies:
     isomorphic-fetch "^3.0.0"
     react-query "^2.25.2"

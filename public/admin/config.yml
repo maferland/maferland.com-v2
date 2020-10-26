@@ -47,6 +47,12 @@ collections:
           - label: Profile Alt
             name: profileAlt
             widget: text
+          - label: Spotify Title
+            name: spotifyTitle
+            widget: text
+          - label: Spotify Description
+            name: spotifyDescription
+            widget: text
           - label: Links
             name: links
             widget: list
