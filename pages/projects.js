@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { UserActivityFeed } from '@maferland/github-activity';
+import facepaint from 'facepaint';
 import BoxLink from '../components/box-link';
 import Grid from '../components/grid';
 import Layout from '../components/layout';
@@ -9,10 +10,19 @@ import SeeMore from '../components/see-more';
 import { getProjects } from '../services/cms';
 import ProjectsContent from '../site/content/projects.json';
 
+const mq = facepaint(['@media(max-width: 1200px)']);
+
 const Projects = ({ projects }) => (
   <Layout>
     <Section className="page">
-      <div>
+      <div
+        css={mq({
+          '.post-link': {
+            alignItems: [undefined, 'center'],
+            '--post-link-height': [undefined, '120px'],
+          },
+        })}
+      >
         <h1 className="title is-3" style={{ marginTop: 0 }}>
           {ProjectsContent.title}
         </h1>
@@ -24,12 +34,12 @@ const Projects = ({ projects }) => (
                 <h2 className="title is-4 is-mono" style={{ marginBottom: '0.5rem' }}>
                   {title}
                 </h2>
-                <p css={{ fontSize: '1.15em' }}>{description}</p>
+                <p css={mq({ fontSize: '1.15em', display: [undefined, 'none'] })}>{description}</p>
               </BoxLink>
             ))}
         </Grid>
       </div>
-      <SeeMore sectionId="activity" />
+      <SeeMore sectionId="activity" mobileHidden />
     </Section>
 
     <Section className="page" id="activity">

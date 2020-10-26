@@ -1,16 +1,19 @@
+import facepaint from 'facepaint';
 import Arrow from './arrow';
 
-const SeeMore = ({ sectionId }) => (
+const mq = facepaint(['@media(max-width: 1200px)']);
+
+const SeeMore = ({ sectionId, mobileHidden = false }) => (
   <div
-    style={{
+    css={mq({
       position: 'absolute',
       bottom: 0,
-      display: 'flex',
+      display: ['flex', mobileHidden ? 'none' : 'flex'],
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
       paddingBottom: '1.5em',
-    }}
+    })}
   >
     <a href={`#${sectionId}`}>
       <Arrow />
