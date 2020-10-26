@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { useRecentlyPlayed } from '@maferland/spotify-react';
 import facepaint from 'facepaint';
+import Grid from './grid';
 
 const mq = facepaint(['@media(max-width: 1200px)']);
 
@@ -39,12 +40,6 @@ const Track = ({ trackName, trackUrl, albumName, albumImageUrl, index }) => {
     </a>
   );
 };
-
-const Grid = ({ children }) => (
-  <div css={mq({ display: 'grid', gridTemplateColumns: ['repeat(5, 1fr)', 'repeat(2,1fr)'], gridGap: '1em' })}>
-    {children}
-  </div>
-);
 
 const RecentlyPlayed = () => {
   // eslint-disable-next-line no-unused-vars

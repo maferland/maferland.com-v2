@@ -1,23 +1,13 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import { UserActivityFeed } from '@maferland/github-activity';
 import BoxLink from '../components/box-link';
+import Grid from '../components/grid';
 import Layout from '../components/layout';
 import Section from '../components/section';
 import SeeMore from '../components/see-more';
 import { getProjects } from '../services/cms';
 import ProjectsContent from '../site/content/projects.json';
-
-const grid = css`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5em;
-  margin-top: 1.5em;
-
-  @include touch {
-    grid-template-columns: 1fr;
-  }
-`;
 
 const Projects = ({ projects }) => (
   <Layout>
@@ -27,7 +17,7 @@ const Projects = ({ projects }) => (
           {ProjectsContent.title}
         </h1>
         <p className="subtitle is-5">{ProjectsContent.description}</p>
-        <div css={grid}>
+        <Grid width={2} mobileWidth={1}>
           {projects &&
             projects.map(({ title, description, link }) => (
               <BoxLink key={title} link={link} cta={ProjectsContent.cta}>
@@ -37,12 +27,12 @@ const Projects = ({ projects }) => (
                 <p css={{ fontSize: '1.15em' }}>{description}</p>
               </BoxLink>
             ))}
-        </div>
+        </Grid>
       </div>
       <SeeMore sectionId="activity" />
     </Section>
 
-    <Section className="page" css={grid} id="activity">
+    <Section className="page" id="activity">
       <div>
         <h2 className="subtitle is-3">{ProjectsContent.github}</h2>
         <UserActivityFeed username="maferland" limit={5} />
