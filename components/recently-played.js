@@ -1,9 +1,28 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { useRecentlyPlayed } from '@maferland/spotify-react';
+import facepaint from 'facepaint';
 
-const Track = ({ trackName, trackUrl, albumName, albumImageUrl }) => {
+const mq = facepaint(['@media(max-width: 1200px)']);
+
+const Track = ({ trackName, trackUrl, albumName, albumImageUrl, index }) => {
   return (
-    <a href={trackUrl} style={{ color: '#303030', fontWeight: '700', textDecoration: 'underline' }}>
+    <a
+      css={
+        index > 3
+          ? mq({
+              display: ['flex', 'none'],
+            })
+          : { display: 'flex' }
+      }
+      href={trackUrl}
+      style={{
+        color: '#303030',
+        fontWeight: '700',
+        textDecoration: 'underline',
+        flexDirection: 'column',
+      }}
+    >
       <img
         src={albumImageUrl || ''}
         alt={albumName ? `${albumName} album cover` : ''}
@@ -16,14 +35,17 @@ const Track = ({ trackName, trackUrl, albumName, albumImageUrl }) => {
         height="300"
         width="300"
       />
-      {trackName || 'Loading...'}
+      <p style={{ marginTop: '0.25em' }}>{trackName || 'Loading...'}</p>
     </a>
   );
 };
 
 const Grid = ({ children }) => (
-  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridGap: '1em' }}>{children}</div>
+  <div css={mq({ display: 'grid', gridTemplateColumns: ['repeat(5, 1fr)', 'repeat(2,1fr)'], gridGap: '1em' })}>
+    {children}
+  </div>
 );
+
 const RecentlyPlayed = () => {
   // eslint-disable-next-line no-unused-vars
   const { isLoading, error, data } = useRecentlyPlayed(12166023407);
@@ -35,7 +57,7 @@ const RecentlyPlayed = () => {
           .fill(undefined)
           .map((_, i) => (
             // eslint-disable-next-line react/no-array-index-key
-            <Track key={i} />
+            <Track key={i} index={i} />
           ))}
       </Grid>
     );
@@ -43,7 +65,7 @@ const RecentlyPlayed = () => {
 
   return (
     <Grid>
-      {data.items.map((item) => {
+      {data.items.map((item, i) => {
         const {
           track: {
             name: trackName,
@@ -59,6 +81,7 @@ const RecentlyPlayed = () => {
             trackUrl={trackUrl}
             albumName={albumName}
             albumImageUrl={medium.url}
+            index={i}
           />
         );
       })}
