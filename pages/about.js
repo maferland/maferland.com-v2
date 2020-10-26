@@ -1,25 +1,20 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import facepaint from 'facepaint';
-import Arrow from '../components/arrow';
 import Layout from '../components/layout';
 import ProfileImage from '../components/profile-image';
 import RecentlyPlayed from '../components/recently-played';
+import Section from '../components/section';
+import SeeMore from '../components/see-more';
 import SocialLink from '../components/social-link';
 import AboutContent from '../site/content/about.json';
 import './about.module.scss';
 
 const mq = facepaint(['@media(max-width: 1200px)']);
 
-const sectionStyle = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const About = () => (
   <Layout>
-    <section className="page fullheight" css={mq(sectionStyle, { flexDirection: ['row', 'column'] })}>
+    <Section className="page">
       <div className="column is-4-widescreen is-5-desktop is-6-tablet is-8-mobile">
         <ProfileImage
           image={AboutContent.profileImage}
@@ -36,25 +31,10 @@ const About = () => (
           ))}
         </div>
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingBottom: '1.5em',
-        }}
-      >
-        <a href="#spotify">
-          <Arrow />
-        </a>
-      </div>
-    </section>
+      <SeeMore sectionId="spotify" />
+    </Section>
 
-    <section
-      className="fullheight"
+    <Section
       css={mq({ backgroundColor: '#f3e2ea', display: 'flex', justifyContent: 'center', alignItems: 'center' })}
       id="spotify"
     >
@@ -65,7 +45,7 @@ const About = () => (
           <RecentlyPlayed />
         </div>
       </div>
-    </section>
+    </Section>
   </Layout>
 );
 
