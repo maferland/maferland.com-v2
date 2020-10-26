@@ -1,3 +1,4 @@
+import Arrow from '../components/arrow';
 import Layout from '../components/layout';
 import ProfileImage from '../components/profile-image';
 import RecentlyPlayed from '../components/recently-played';
@@ -24,9 +25,14 @@ const About = () => (
           ))}
         </div>
       </div>
+      <div style={{ position: 'absolute', bottom: 0, width: '100%', textAlign: 'center', paddingBottom: '1.5em' }}>
+        <a href="#spotify">
+          <Arrow />
+        </a>
+      </div>
     </section>
 
-    <section className="fullheight" style={{ backgroundColor: '#f3e2ea' }}>
+    <section className="fullheight" style={{ backgroundColor: '#f3e2ea' }} id="spotify">
       <div className="page columns is-vcentered is-centered ">
         <div>
           <h2 className="title is-size-3-desktop is-size-4-touch">{AboutContent.spotifyTitle}</h2>
