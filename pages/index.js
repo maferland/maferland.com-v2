@@ -1,14 +1,21 @@
 import Hero from '../components/hero';
 import Layout from '../components/layout';
+import Section from '../components/section';
+import SeeMore from '../components/see-more';
 import IndexContent from '../site/content/home.json';
-import './index.module.scss';
 
 const Index = () => (
   <Layout>
-    <section className="page fullheight">
+    <Section className="page">
       <Hero className="fullheight" suffixes={IndexContent.suffixes} />
-    </section>
-    <section className="fullheight" css={{ position: 'relative' }}>
+      <SeeMore
+        sectionId="identity"
+        css={{
+          width: '100%',
+        }}
+      />
+    </Section>
+    <Section id="identity" className="fullheight" css={{ position: 'relative', display: 'block' }}>
       <div
         css={{
           position: 'absolute',
@@ -47,16 +54,26 @@ const Index = () => (
         css={{
           color: 'var(--white)',
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
           height: '100%',
           opacity: 0.95,
         }}
       >
-        <h2 css={{ fontSize: 'var(--font-xxl)' }}>Identity</h2>
-        <p css={{ fontSize: 'var(--font-m)', marginTop: '-1em' }}>/aɪˈdentɪti/</p>
+        <div>
+          <h2 css={{ fontSize: 'var(--font-xxl)' }}>Identity</h2>
+          <p css={{ fontSize: 'var(--font-m)', marginTop: '-1em' }}>/aɪˈdentɪti/</p>
+        </div>
+        <div css={{ fontSize: 'var(--font-m)', maxWidth: '375px' }}>
+          {IndexContent.identity.line1}
+          <br />
+          {IndexContent.identity.line2}
+          <br />
+          {IndexContent.identity.line3}
+        </div>
       </div>
-    </section>
+    </Section>
   </Layout>
 );
 
