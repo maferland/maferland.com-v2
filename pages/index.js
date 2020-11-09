@@ -1,8 +1,11 @@
+import facepaint from 'facepaint';
 import Hero from '../components/hero';
 import Layout from '../components/layout';
 import Section from '../components/section';
 import SeeMore from '../components/see-more';
 import IndexContent from '../site/content/home.json';
+
+const mq = facepaint(['@media(max-width: 1200px)']);
 
 const Index = () => (
   <Layout>
@@ -51,27 +54,22 @@ const Index = () => (
 
       <div
         className="page"
-        css={{
+        css={mq({
           color: 'var(--white)',
           display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          flexDirection: ['row', 'column'],
+          justifyContent: ['space-between', 'center'],
+          alignItems: ['center', 'flex-start'],
+          padding: ['0', '0 5%'],
           height: '100%',
           opacity: 0.95,
-        }}
+        })}
       >
         <div>
           <h2 css={{ fontSize: 'var(--font-xxl)' }}>Identity</h2>
           <p css={{ fontSize: 'var(--font-m)', marginTop: '-1em' }}>/aɪˈdentɪti/</p>
         </div>
-        <div css={{ fontSize: 'var(--font-m)', maxWidth: '375px' }}>
-          {IndexContent.identity.line1}
-          <br />
-          {IndexContent.identity.line2}
-          <br />
-          {IndexContent.identity.line3}
-        </div>
+        <div css={{ fontSize: 'var(--font-m)', maxWidth: '450px' }}>{IndexContent.identity.line1}</div>
       </div>
     </Section>
   </Layout>

@@ -21,8 +21,6 @@ collections:
             widget: object
             fields:
               - { label: Line1, name: line1, widget: string }
-              - { label: Line2, name: line2, widget: string }
-              - { label: Line3, name: line3, widget: string }
       - label: 'About'
         name: 'about'
         file: 'site/content/about.json'
