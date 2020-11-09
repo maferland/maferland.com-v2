@@ -34,13 +34,9 @@ const Post = (props) => {
                 <p className="date">{date}</p>
               </span>
             </div>
-            <Image
-              src={props.image.url}
-              alt={props.image.alt}
-              style={{ width: '100%', height: 'auto', marginBottom: '25px' }}
-              width="1200"
-              height="800"
-            />
+            <div style={{ width: '100%', height: 'auto', marginBottom: '25px' }}>
+              <Image src={props.image.url} alt={props.image.alt} width="1200" height="800" />
+            </div>
             <Markdown className="body">{props.body}</Markdown>
           </article>
         </div>
