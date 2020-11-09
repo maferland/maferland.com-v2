@@ -9,25 +9,26 @@ const name = 'Marc-Antoine';
 
 const mq = facepaint(['@media(max-width: 1200px)']);
 
-const Hero = (props) => {
+const Hero = ({ className, suffixes }) => {
   const [suffixIndex, setSuffixIndex] = useState(0);
 
   useInterval(() => {
     let randomIndex;
     do {
-      randomIndex = Math.floor(Math.random() * props.suffixes.length);
+      randomIndex = Math.floor(Math.random() * suffixes.length);
     } while (randomIndex === suffixIndex);
     setSuffixIndex(randomIndex);
   }, 3000);
 
   return (
     <div
-      className={`has-text-centered-mobile ${props.className} is-mono is-size-2`}
+      className={`has-text-centered-mobile ${className} is-mono is-size-2`}
       css={{
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
+        width: '100%',
       }}
     >
       <div
@@ -59,7 +60,7 @@ const Hero = (props) => {
             position: 'relative',
           }}
         >
-          {props.suffixes.map((suffix, i) => (
+          {suffixes.map((suffix, i) => (
             <div key={`suffix-${i.toString()}`} className={`suffix ${i === suffixIndex ? 'active' : ''}`}>
               {suffix}
             </div>

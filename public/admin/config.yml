@@ -16,18 +16,11 @@ collections:
             name: suffixes
             widget: list
             field: { label: Suffix, name: suffix, widget: string }
-          - label: Middle
-            name: middle
+          - label: Identity
+            name: identity
             widget: object
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Subtitle, name: subtitle, widget: string }
-          - label: End
-            name: end
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Subtitle, name: subtitle, widget: string }
+              - { label: Line1, name: line1, widget: string }
       - label: 'About'
         name: 'about'
         file: 'site/content/about.json'

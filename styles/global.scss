@@ -34,6 +34,11 @@
 
   &:last-of-type {
     height: calc(100vh - #{$footer-height});
+    max-height: calc(100vh - #{$footer-height});
+
+    #background {
+      height: calc(100vh - #{$footer-height});
+    }
   }
 
   &:first-of-type:last-of-type {
@@ -57,4 +62,13 @@
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
   --spacing-xxl: 4rem;
+
+  --font-xs: 0.5rem;
+  --font-s: 1rem;
+  --font-m: 1.5rem;
+  --font-l: 2rem;
+  --font-xl: 3rem;
+  --font-xxl: 5rem;
+
+  --white: #fff;
 }

@@ -13,12 +13,7 @@
     "an artisanal panadero 🥖",
     "a tacos lover 🌮"
   ],
-  "middle": {
-    "title": "Middle Section Title",
-    "subtitle": "Middle Section Subtitle 👍 oh la la"
-  },
-  "end": {
-    "title": "End Section Title",
-    "subtitle": "End Section Subtitle 👎 si la sol la si"
+  "identity": {
+    "line1": "Distinguishing character or personality of an individual. Like the ever changing color of a kaleidoscope."
   }
 }
