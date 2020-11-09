@@ -12,7 +12,7 @@ const Blog = ({ posts }) => (
       <div className="post-links">
         {posts &&
           posts.map(({ title, slug }) => (
-            <BoxLink key={slug} link={`/${slug}`}>
+            <BoxLink key={slug} link={`/blog/${slug}`}>
               <h2 className="title is-4 is-mono">{title}</h2>
             </BoxLink>
           ))}
