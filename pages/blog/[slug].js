@@ -1,6 +1,5 @@
 import Markdown from 'markdown-to-jsx';
 import moment from 'moment';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Layout from '../../components/layout';
@@ -35,7 +34,7 @@ const Post = (props) => {
               </span>
             </div>
             <div style={{ width: '100%', height: 'auto', marginBottom: '25px' }}>
-              <Image src={props.image.url} alt={props.image.alt} width="1200" height="800" />
+              <img src={props.image.url} alt={props.image.alt} width="1200" height="800" />
             </div>
             <Markdown className="body">{props.body}</Markdown>
           </article>
