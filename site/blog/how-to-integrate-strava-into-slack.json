@@ -7,5 +7,5 @@
     "alt": "Morning jog"
   },
   "description": "If like me you use Strava and want to brag about your latest PR with your coworker here's the best way I found to automatically post my results in Slack. Thanks Zapier!",
-  "body": "![]()\n\n## Zapier\n\nI'm not going to explain what's [Zapier](https://zapier.com/), they do it well enough by themselves. If you're not familiar with them go check it out, it's pretty useful to automate mundane tasks.\n\nIf you don't have an account go ahead and create it, we're going to need it :)\n\n## Make a Zap\n\nFirst, you're going to need to create your Zap.\n\n![Make a zap](/img/make-a-zap.png)"
+  "body": "## Zapier\n\nI'm not going to explain what's [Zapier](https://zapier.com/), they do it well enough by themselves. If you're not familiar with them go check it out, it's pretty useful to automate mundane tasks.\n\nIf you don't have an account go ahead and create it, we're going to need it :)\n\n## Make a Zap\n\nFirst, you're going to need to create your Zap.\n\n![Make a zap](/img/make-a-zap.png)\n"
 }
