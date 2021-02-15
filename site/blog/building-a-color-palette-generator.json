@@ -1,0 +1,11 @@
+{
+  "title": "Building a color palette generator",
+  "slug": "/paletteify-color-palette-generator",
+  "date": "2021-02-15T15:11:09.302Z",
+  "image": {
+    "url": "/img/color-palette.jpg",
+    "alt": "painting color palette"
+  },
+  "description": "Very few of the projects I begin end up being released. For once, I managed to build something useful. Here is how I built Paletteify.",
+  "body": "## Why did I need it\n\nOne of the most important things, when I build something, is that I, Marc-Antoine Ferland, actually want to use it. If I don't need it I won't find the drive to complete it. I'll start the project, learn whatever I wanted from the tech stack I started and that's it. The project will soon be forgotten. Plus, it's very hard to build something actually solving a problem if you don't experience the problem for yourself."
+}
