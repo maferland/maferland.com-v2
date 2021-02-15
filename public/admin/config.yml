@@ -115,7 +115,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - label: Featured Image
+      - label: Featured Image (1200x800)
         name: image
         widget: object
         fields:
