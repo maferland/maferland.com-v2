@@ -19,13 +19,12 @@ const Reach = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
-    }).then(
-      () => {
+    })
+      .then(() => {
         setLoading(false);
         setSubmitted(true);
-      },
-      () => setLoading(false),
-    );
+      })
+      .catch(() => setLoading(false));
   }
 
   const Thanks = () => <p className="subtitle is-5 description">{ReachContent.thanks}</p>;
