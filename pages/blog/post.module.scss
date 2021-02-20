@@ -74,9 +74,9 @@ article .body {
 
 .header {
   margin: 50px 15px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 5fr 1fr;
 
   .header-content {
     width: 80%;
@@ -84,7 +84,7 @@ article .body {
 
   @include touch {
     margin: 25px 0;
-    flex-direction: column;
+    grid-template-columns: 1fr;
 
     .header-content {
       width: 100%;

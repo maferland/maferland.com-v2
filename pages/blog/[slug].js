@@ -28,7 +28,9 @@ const Post = (props) => {
                 <h1 className="title is-3">{props.title}</h1>
                 <p className="subtitle is-5">{props.description}</p>
               </span>
-              <span style={{ textAlign: 'right' }}>
+              <span
+                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', textAlign: 'right' }}
+              >
                 <p>{`${readingTime} min read`}</p>
                 <p className="date">{date}</p>
               </span>
