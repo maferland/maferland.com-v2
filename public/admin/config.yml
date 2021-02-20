@@ -52,6 +52,16 @@ collections:
             fields:
               - { label: Icon, name: icon, widget: string }
               - { label: Url, name: url, widget: string }
+      - label: 'Reach'
+        name: 'reach'
+        file: 'site/content/reach.json'
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
       - label: 'Blog'
         name: 'blog'
         file: 'site/content/blog.json'

@@ -10,10 +10,10 @@ const sectionStyle = css`
   align-items: center;
 `;
 
-const Section = ({ children, className, css: customCss, id }) => (
+const Section = ({ children, className, css: customCss, id, fullheight = true }) => (
   <section
     id={id}
-    className={`fullheight ${className}`}
+    className={`${fullheight ? 'fullheight' : ''} ${className}`}
     css={mq(sectionStyle, { flexDirection: ['row', 'column'] }, customCss)}
   >
     {children}

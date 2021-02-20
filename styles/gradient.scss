@@ -53,7 +53,8 @@
     transition: opacity $transition;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &.active::before {
     opacity: 1;
   }
 }

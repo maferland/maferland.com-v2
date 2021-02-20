@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Layout from '../../components/layout';
 import Meta from '../../components/meta';
+import Reach from '../../components/reach';
 import { getPost, getPosts } from '../../services/cms';
 import './post.module.scss';
 
@@ -40,6 +41,7 @@ const Post = (props) => {
             </div>
             <Markdown className="body">{props.body}</Markdown>
           </article>
+          <Reach />
         </div>
       </Layout>
     </>
