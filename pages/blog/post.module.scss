@@ -96,7 +96,8 @@ article .body {
 iframe {
   display: block;
   height: 580px;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 1em auto;
   #brand {
     display: none;
