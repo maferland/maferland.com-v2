@@ -6,7 +6,6 @@ import ReachContent from '../site/content/reach.json';
 const Reach = () => {
   const [loading, setLoading] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
-  const ref = React.useRef();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -14,7 +13,8 @@ const Reach = () => {
       return;
     }
     setLoading(true);
-    const formData = new FormData(ref.current);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -37,7 +37,8 @@ const Reach = () => {
         {submitted ? (
           <Thanks />
         ) : (
-          <form ref={ref} onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+          <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" netlify>
+            <input type="hidden" name="form-name" value="contact" />
             <p>
               <label htmlFor="name">
                 <span>Name:</span>
