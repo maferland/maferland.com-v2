@@ -138,11 +138,11 @@ collections:
     folder: 'site/blog2'
     extension: 'mdx'
     format: 'frontmatter'
+    create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
       - name: body
         label: Body
-        widget: mdx
+        widget: markdown
   - label: 'Projects'
     name: 'projects'
     folder: 'site/projects'
