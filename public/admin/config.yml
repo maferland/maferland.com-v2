@@ -139,6 +139,7 @@ collections:
     extension: 'mdx'
     format: 'frontmatter'
     fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - name: body
         label: Body
         widget: mdx
