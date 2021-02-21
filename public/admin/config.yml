@@ -133,9 +133,9 @@ collections:
           - { label: Alt, name: alt, widget: string }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-  - label: 'Blog2'
-    name: 'blog2'
-    folder: 'site/blog2'
+  - label: 'Blog3'
+    name: 'blog3'
+    folder: 'site/blog3'
     extension: 'mdx'
     format: 'frontmatter'
     create: true
