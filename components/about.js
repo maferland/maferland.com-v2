@@ -19,8 +19,18 @@ const About = ({ small = false }) => {
           alt={AboutContent.profileAlt}
         />
       </div>
-      <div className="column is-6 is-offset-1-widescreen has-text-centered-desktop" css={mq({ flex: [1, 0] })}>
-        <h1 className={`title is-size-${small ? '5' : '3'}-desktop is-size-${small ? '5' : '4'}-touch`}>
+      <div
+        className="column is-6 is-offset-1-widescreen"
+        css={mq({
+          flex: [1, 0],
+          whiteSpace: ['break-spaces'],
+        })}
+      >
+        <h1
+          className={`title is-size-${small ? '5' : '3'}-desktop is-size-${
+            small ? '5' : '4'
+          }-touch has-text-centered-desktop`}
+        >
           {AboutContent.title}
         </h1>
         <p className={`subtitle is-size-${small ? '6' : '4'}-desktop is-size-${small ? '6' : '5'}-touch`}>
