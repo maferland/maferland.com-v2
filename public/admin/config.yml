@@ -136,8 +136,8 @@ collections:
   - label: 'Blog2'
     name: 'blog2'
     folder: 'site/blog2'
-    extension: 'mdx',
-    format: 'frontmatter',
+    extension: 'mdx'
+    format: 'frontmatter'
     fields:
       - name: body
         label: Body
