@@ -20,7 +20,7 @@ const Post = (props) => {
   const readingTime = getReadingTime(props.body);
   return (
     <>
-      <Meta title={props.title} description={props.description} blog />
+      <Meta title={props.title} description={props.description} thumbnail={props.image} />
       <Layout>
         <div className="page">
           <article>
