@@ -54,6 +54,13 @@
   height: 100vh;
 }
 
+.ig-frame {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  padding-bottom: 0;
+  height: 710px;
+  border-radius: 8px;
+}
+
 :root {
   --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
