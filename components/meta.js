@@ -1,10 +1,11 @@
 import Head from 'next/head';
 
-const Meta = ({ title, description, thumbnail, alt }) => {
+const Meta = ({ title, description, thumbnail, alt, type }) => {
   const MetaWrapper = ({ property, content }) => <meta property={property} content={content} key={property} />;
   return (
     <Head>
       <title>{title}</title>
+      {type && <MetaWrapper property="og:type" content={type} />}
       <MetaWrapper property="og:site_name" content={title} />
       <MetaWrapper property="og:title" content={title} />
       <MetaWrapper property="og:description" content={description} />
