@@ -1,18 +1,20 @@
 import Head from 'next/head';
 
-const Meta = ({ title, description, thumbnail }) => {
+const Meta = ({ title, description, thumbnail, alt }) => {
+  const MetaWrapper = ({ property, content }) => <meta property={property} content={content} key={property} />;
   return (
     <Head>
       <title>{title}</title>
-      <meta property="og:site_name" content={title} key="og:site_name" />
-      <meta property="og:title" content={title} key="og:title" />
-      <meta property="og:description" content={description} key="og:description" />
-      <meta property="og:image" content={thumbnail || '/img/share.png'} key="og:image" />
-      <meta name="twitter:card" content="summary" key="twitter:card" />
-      <meta name="twitter:site" content="@ma_ferland" key="twitter:site" />
-      <meta property="twitter:title" content={title} key="twitter:title" />
-      <meta property="twitter:description" content={description} key="og:description" />
-      <meta property="twitter:image" content={thumbnail || '/img/share.png'} key="twitter:image" />
+      <MetaWrapper property="og:site_name" content={title} />
+      <MetaWrapper property="og:title" content={title} />
+      <MetaWrapper property="og:description" content={description} />
+      <MetaWrapper property="og:image" content={thumbnail || '/img/share.png'} />
+      <MetaWrapper name="twitter:card" content="summary" />
+      <MetaWrapper name="twitter:site" content="@ma_ferland" />
+      <MetaWrapper property="twitter:title" content={title} />
+      <MetaWrapper property="twitter:description" content={description} />
+      <MetaWrapper property="twitter:image" content={thumbnail || '/img/share.png'} />
+      {alt && <MetaWrapper property="twitter:image:alt" content={alt} />}
     </Head>
   );
 };
