@@ -24,16 +24,15 @@ const directions = {
 
 const defaultDirection = directions.down;
 
-const Arrow = (direction = 'down') => {
-  return (
-    <div>
-      <span
-        css={css`
-          ${arrow};
-          ${directions[direction] || defaultDirection};
-        `}
-      />
-    </div>
-  );
-};
+const Arrow = (direction = 'down') => (
+  <div>
+    <span
+      css={css`
+        ${arrow};
+        ${directions[direction] || defaultDirection};
+      `}
+    />
+  </div>
+);
+
 export default Arrow;

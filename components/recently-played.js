@@ -4,40 +4,38 @@ import Grid from './grid';
 
 const mq = facepaint(['@media(max-width: 1200px)']);
 
-const Track = ({ trackName, trackUrl, albumName, albumImageUrl, index }) => {
-  return (
-    <a
-      css={
-        index > 3
-          ? mq({
-              display: ['flex', 'none'],
-            })
-          : { display: 'flex' }
-      }
-      href={trackUrl}
+const Track = ({ trackName, trackUrl, albumName, albumImageUrl, index }) => (
+  <a
+    css={
+      index > 3
+        ? mq({
+            display: ['flex', 'none'],
+          })
+        : { display: 'flex' }
+    }
+    href={trackUrl}
+    style={{
+      color: '#303030',
+      fontWeight: '700',
+      textDecoration: 'underline',
+      flexDirection: 'column',
+    }}
+  >
+    <img
+      src={albumImageUrl || ''}
+      alt={albumName ? `${albumName} album cover` : ''}
       style={{
-        color: '#303030',
-        fontWeight: '700',
-        textDecoration: 'underline',
-        flexDirection: 'column',
+        borderRadius: '0.25em',
+        boxShadow: '4px 2px 2px DimGray',
+        paddingTop: !albumName ? '100%' : undefined,
+        backgroundColor: 'rgb(220, 220, 220, 0.2)',
       }}
-    >
-      <img
-        src={albumImageUrl || ''}
-        alt={albumName ? `${albumName} album cover` : ''}
-        style={{
-          borderRadius: '0.25em',
-          boxShadow: '4px 2px 2px DimGray',
-          paddingTop: !albumName ? '100%' : undefined,
-          backgroundColor: 'rgb(220, 220, 220, 0.2)',
-        }}
-        height="300"
-        width="300"
-      />
-      <p style={{ marginTop: '0.25em' }}>{trackName || 'Loading...'}</p>
-    </a>
-  );
-};
+      height="300"
+      width="300"
+    />
+    <p style={{ marginTop: '0.25em' }}>{trackName || 'Loading...'}</p>
+  </a>
+);
 
 const RecentlyPlayed = () => {
   // eslint-disable-next-line no-unused-vars
