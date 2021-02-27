@@ -1,0 +1,11 @@
+{
+  "title": "Why you should use Volta",
+  "slug": "why-use-volta",
+  "date": "2021-02-27T17:42:35.595Z",
+  "image": {
+    "url": "/img/power-pylon.jpg",
+    "alt": "Power pylons at sunset"
+  },
+  "description": "Volta is a tool to reduce the friction with package manager versions",
+  "body": "## Why"
+}
