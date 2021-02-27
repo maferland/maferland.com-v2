@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/react';
 
 const arrow = css`
   border: 3px solid black;

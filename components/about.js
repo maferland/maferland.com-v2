@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import facepaint from 'facepaint';
 import ProfileImage from './profile-image';
 import SocialLink from './social-link';

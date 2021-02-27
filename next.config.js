@@ -19,7 +19,7 @@ const webpackConfig = withCSS(
       });
 
       // Ignore not loaded locale
-      config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/));
+      config.plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/));
 
       return config;
     },

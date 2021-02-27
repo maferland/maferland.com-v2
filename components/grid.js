@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import facepaint from 'facepaint';
 
 const mq = facepaint(['@media(max-width: 1200px)']);

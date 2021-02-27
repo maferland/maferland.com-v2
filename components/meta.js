@@ -7,7 +7,7 @@ const Meta = ({ title, description, thumbnail, alt, type }) => {
   return (
     <Head>
       <title>{title}</title>
-      {type && <MetaWrapper property="og:type" content={type} />}
+      {type ? <MetaWrapper property="og:type" content={type} /> : null}
       <MetaWrapper property="og:site_name" content={title} />
       <MetaWrapper property="og:title" content={title} />
       <MetaWrapper property="og:description" content={description} />
@@ -17,7 +17,7 @@ const Meta = ({ title, description, thumbnail, alt, type }) => {
       <MetaWrapper property="twitter:title" content={title} />
       <MetaWrapper property="twitter:description" content={description} />
       <MetaWrapper property="twitter:image" content={`https://maferland.com/${thumbnail || '/img/share.png'}`} />
-      {alt && <MetaWrapper property="twitter:image:alt" content={alt} />}
+      {alt ? <MetaWrapper property="twitter:image:alt" content={alt} /> : null}
     </Head>
   );
 };
