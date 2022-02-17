@@ -1,5 +1,6 @@
 const {
   mauve,
+  slate,
   tomato,
   red,
   crimson,
@@ -66,6 +67,7 @@ const colors = radixToTailwind({
   ...amber,
   ...orange,
   ...mauve,
+  ...slate,
 })
 console.log(colors)
 
