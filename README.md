@@ -1,34 +1,37 @@
-# Welcome to Remix!
+<div align="center">
+<h1>🚀 Remix + Tailwind Starter</h1>
 
-- [Remix Docs](https://remix.run/docs)
+<p>An opinionated Remix + Tailwind Starter project</p>
+</div>
 
-## Deployment
+---
 
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+- [Installation](#installation)
+- [Development](#development)
+- [Author](#author)
+- [LICENSE](#license)
 
-```sh
-npm i -g vercel
-vercel
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Installation
+
+```bash
+yarn
 ```
-
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
 
 ## Development
 
-To run your Remix app locally, make sure your project's local dependencies are installed:
-
-```sh
-npm install
+```bash
+yarn dev
 ```
 
-Afterwards, start the Remix development server like so:
+## Author
 
-```sh
-npm run dev
-```
+- [Marc-Antoine Ferland](https://maferland.com)
 
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
+## LICENSE
 
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+[MIT](LICENSE)
