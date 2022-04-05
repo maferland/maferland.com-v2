@@ -1,6 +1,6 @@
 {
   "private": true,
-  "description": "Remix+Tailwind Starter",
+  "description": "💈 Personal website /w Remix on Vercel",
   "license": "MIT",
   "author": "Marc-Antoine Ferland <me@maferland.com>",
   "dependencies": {
