@@ -1,10 +1,3 @@
-:root {
-  --purple: #7c5295;
-  --pink: #ee4266;
-  --white: #fff;
-  --black: #303030;
-}
-
 .gradient {
   background: linear-gradient(-45deg, var(--pink), var(--purple), var(--pink), var(--purple));
   background-size: 400% 400%;

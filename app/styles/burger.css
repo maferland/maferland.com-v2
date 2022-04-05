@@ -1,0 +1,28 @@
+.burger:before,
+.burger:after {
+  transition: all 0.3s ease-in-out;
+}
+
+.burger.active:before,
+.burger:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+.burger.active:after,
+.burger:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.burger.active div,
+.burger:hover div {
+  transform: scale(0);
+}
+
+.burger:after,
+.burger:before,
+.burger div {
+  background-color: var(--black);
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+}
