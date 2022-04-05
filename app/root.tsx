@@ -39,10 +39,12 @@ function Document({ children, title }: { children: React.ReactNode; title?: stri
 
 function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
-    <div className="min-h-screen flex flex-col divide-y text-slate-1000 bg-slate-100 divide-slate-200">
+    <div className="min-h-screen flex flex-col bg-purple-1000 text-purple-100">
       <Navbar />
-      <main className="flex-1 p-6">{children}</main>
-      <Footer />
+      <div className="w-full min-h-full flex flex-col">
+        <main className="flex-1 p-6">{children}</main>
+        <Footer />
+      </div>
     </div>
   )
 }
