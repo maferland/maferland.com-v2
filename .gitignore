@@ -139,3 +139,4 @@ dist
 .pnp.*
 api
 app/tailwind.css
+app/tailwind
