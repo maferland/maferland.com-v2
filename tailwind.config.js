@@ -69,7 +69,6 @@ const colors = radixToTailwind({
   ...mauve,
   ...slate,
 })
-console.log(colors)
 
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
