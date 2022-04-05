@@ -1,3 +1,7 @@
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import { MetaFunction } from '@remix-run/react/routeModules'
+import { Footer } from '~/components/layout/Footer'
+import { Navbar } from '~/components/layout/Navbar'
 import burger from '~/styles/burger.css'
 import gradient from '~/styles/gradient.css'
 import reset from '~/styles/reset.css'
