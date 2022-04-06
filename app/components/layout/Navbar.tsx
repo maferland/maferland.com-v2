@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false)
   const { y } = useWindowScroll()
 
-  const hasScrolled = y > 10
+  const hasScrolled = y > 30
 
   const links = [
     <NavLink key="projects" to="/projects">
