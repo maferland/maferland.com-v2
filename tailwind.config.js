@@ -76,6 +76,7 @@ module.exports = {
     extend: {
       colors,
       opacity: {
+        95: '.95',
         97: '.97',
       },
     },
