@@ -75,6 +75,9 @@ module.exports = {
   theme: {
     extend: {
       colors,
+      opacity: {
+        97: '.97',
+      },
     },
   },
   variants: {},

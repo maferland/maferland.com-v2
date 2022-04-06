@@ -54,9 +54,9 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`flex flex-col w-full justify-center h-20 py-4 px-24 fixed bg-purple-1000 transition-all duration-150 ease-in z-10 ${
-        open ? 'h-screen bg-pink-100 text-purple-900' : 'text-purple-100 '
+        open ? 'h-screen bg-violet-100 text-purple-900 opacity-97' : 'text-violet-100 '
       }
-      ${hasScrolled ? 'bg-pink-100 text-purple-900' : ''}  `}
+      ${hasScrolled ? 'bg-violet-100 text-violet-900' : ''}  `}
     >
       <div className="flex flex-row justify-between items-center">
         <NavLink to="/">
