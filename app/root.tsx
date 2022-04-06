@@ -1,7 +1,6 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
-import { MetaFunction } from '@remix-run/react/routeModules'
-import { Footer } from '~/components/layout/Footer'
-import { Navbar } from '~/components/layout/Navbar'
+import Footer from '~/components/layout/footer'
+import Navbar from '~/components/layout/navbar'
 import burger from '~/styles/burger.css'
 import gradient from '~/styles/gradient.css'
 import reset from '~/styles/reset.css'
@@ -18,7 +17,7 @@ export function links() {
   ]
 }
 
-export const meta: MetaFunction = () => {
+export const meta = () => {
   return { title: 'Marc-Antoine Ferland' }
 }
 
@@ -45,7 +44,7 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <div className="min-h-screen flex flex-col bg-purple-1000 text-purple-100">
       <Navbar />
-      <div className="w-full min-h-full flex flex-col">
+      <div className="w-full min-h-full flex flex-col pt-20 ">
         <main className="flex-1 p-6">{children}</main>
         <Footer />
       </div>

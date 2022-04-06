@@ -1,28 +1,52 @@
+.burger.light {
+  --hover-color: var(--black);
+  --color: rgb(229, 231, 235);
+}
+
+.burger.dark {
+  --hover-color: rgb(229, 231, 235);
+  --color: var(--black);
+}
+
 .burger:before,
 .burger:after {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .burger.active:before,
 .burger:hover:before {
-  transform: translateY(12px) rotate(135deg);
+  transform: translateY(10px) rotate(135deg);
 }
 .burger.active:after,
 .burger:hover:after {
-  transform: translateY(-12px) rotate(-135deg);
+  transform: translateY(-11px) rotate(-135deg);
 }
+
+.burger.active:before,
+.burger.active:after {
+  background-color: rgb(229, 231, 235);
+}
+
 .burger.active div,
 .burger:hover div {
   transform: scale(0);
 }
 
-.burger:after,
-.burger:before,
-.burger div {
-  background-color: var(--black);
+.burger:before {
+  background-color: var(--color);
   border-radius: 3px;
   content: '';
   display: block;
-  height: 5px;
+  height: 4px;
+  margin: 2px 0;
+}
+
+.burger:after,
+.burger div {
+  background-color: var(--color);
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 4px;
   margin: 7px 0;
 }
