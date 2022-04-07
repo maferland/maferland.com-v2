@@ -1,3 +1,7 @@
+import Paragraph from '~/components/typography/paragraph'
+import Subtitle from '~/components/typography/subtitle'
+import Title from '~/components/typography/title'
+
 export default function Index() {
   const episodes = [
     {
@@ -16,13 +20,13 @@ export default function Index() {
   ]
   return (
     <>
-      <h1 className="text-violet-100 text-6xl">Podcasts</h1>
+      <Title>Podcasts</Title>
 
       <div className="grid gap-8 grid-cols-1">
         {episodes.map(({ title, description, url }) => (
-          <article className="text-violet-100 flex flex-col gap-2">
-            <h2 className="text-3xl">{title}</h2>
-            <p className="text-lg">{description}</p>
+          <article className="flex flex-col gap-2">
+            <Subtitle>{title}</Subtitle>
+            <Paragraph>{description}</Paragraph>
             <iframe
               style={{ borderRadius: '12px' }}
               src={url}
