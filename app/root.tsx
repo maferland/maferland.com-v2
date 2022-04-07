@@ -44,8 +44,8 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
     <div className="min-h-screen flex flex-col bg-purple-1000 text-purple-100">
       <Navbar />
-      <div className="w-full min-h-full flex flex-col pt-20 ">
-        <main className="flex-1 p-6">{children}</main>
+      <div className="w-full min-h-full flex flex-1 flex-col pt-20 gap-12">
+        <main className="flex flex-col gap-10 flex-1 px-8 md:px-24 ">{children}</main>
         <Footer />
       </div>
     </div>

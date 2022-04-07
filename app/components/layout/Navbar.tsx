@@ -23,11 +23,7 @@ const Burger: React.FC<{ open?: boolean; onClick: () => void; color: BurgerColor
   color,
 }) => {
   return (
-    <div
-      role="button"
-      className={`lg:hidden w-0 h-0 sm:w-10 sm:h-10 p-1 burger ${open ? 'active' : color}`}
-      onClick={handleClick}
-    >
+    <div role="button" className={`lg:hidden w-10 h-10 p-1 burger ${open ? 'active' : color}`} onClick={handleClick}>
       <div />
     </div>
   )
@@ -39,27 +35,35 @@ const Navbar: React.FC = () => {
 
   const hasScrolled = y > 30
 
+  const close = () => setOpen(false)
+
   const links = [
-    <NavLink key="projects" to="/projects">
-      projects
-    </NavLink>,
-    <NavLink key="blog" to="/blog">
+    // <NavLink key="projects" to="/projects">
+    //   projects
+    // </NavLink>,
+    <NavLink key="blog" to="/blog" onClick={close}>
       blog
     </NavLink>,
-    <NavLink key="about" to="/about">
+    <NavLink key="podcasts" to="/podcasts" onClick={close}>
+      podcasts
+    </NavLink>,
+    <NavLink key="about" to="/about" onClick={close}>
       about
     </NavLink>,
   ]
 
+  const textColor = open || hasScrolled ? 'text-violet-900' : 'text-violet-100'
+  const bgColor = open || hasScrolled ? 'bg-violet-100' : 'bg-violet-1000'
+
   return (
     <nav
-      className={`flex flex-col w-full justify-center h-20 py-4 px-24 fixed bg-purple-1000 transition-all duration-150 ease-in z-10 ${
-        open ? 'h-screen bg-violet-100 text-purple-900 opacity-97' : 'text-violet-100 opacity-95'
-      }
-      ${hasScrolled ? 'bg-violet-100 text-violet-900' : ''}  `}
+      className={`
+      flex flex-col w-full justify-center h-20 py-4 px-8 md:px-24 fixed  transition-all duration-150 ease z-10 bg-opacity-97 ${textColor} ${bgColor}
+      ${open ? 'h-screen' : ''}
+      `}
     >
       <div className="flex flex-row justify-between items-center">
-        <NavLink to="/">
+        <NavLink to="/" onClick={close}>
           <h1 className="text-2xl h-max">Marc-Antoine Ferland</h1>
         </NavLink>
 
