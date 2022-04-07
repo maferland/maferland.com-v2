@@ -2,6 +2,7 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@re
 import Footer from '~/components/layout/footer'
 import Navbar from '~/components/layout/navbar'
 import burger from '~/styles/burger.css'
+import fonts from '~/styles/fonts.css'
 import gradient from '~/styles/gradient.css'
 import reset from '~/styles/reset.css'
 import variables from '~/styles/variables.css'
@@ -10,6 +11,7 @@ import tailwind from './tailwind.css'
 export function links() {
   return [
     { rel: 'stylesheet', href: reset },
+    { rel: 'stylesheet', href: fonts },
     { rel: 'stylesheet', href: tailwind },
     { rel: 'stylesheet', href: variables },
     { rel: 'stylesheet', href: burger },
@@ -45,7 +47,7 @@ function Layout({ children }: React.PropsWithChildren<{}>) {
     <div className="min-h-screen flex flex-col bg-purple-1000 text-purple-100">
       <Navbar />
       <div className="w-full min-h-full flex flex-1 flex-col pt-20 gap-12">
-        <main className="flex flex-col gap-10 flex-1 px-8 md:px-24 ">{children}</main>
+        <main className="flex flex-col gap-10 flex-1 px-8 md:px-24 text-violet-100">{children}</main>
         <Footer />
       </div>
     </div>

@@ -73,6 +73,10 @@ const colors = radixToTailwind({
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
   theme: {
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+      mono: ['Roboto Mono', 'monospace'],
+    },
     extend: {
       colors,
       opacity: {
