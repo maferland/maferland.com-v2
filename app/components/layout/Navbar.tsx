@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
     >
       <div className="flex flex-row justify-between items-center">
         <NavLink to="/" onClick={close}>
-          <h1 className="text-2xl h-max">Marc-Antoine Ferland</h1>
+          <h1 className="text-2xl h-full"> Marc-Antoine Ferland</h1>
         </NavLink>
 
         <Burger open={open} onClick={() => setOpen(!open)} color={hasScrolled ? BurgerColor.LIGHT : BurgerColor.DARK} />

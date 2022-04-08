@@ -4,7 +4,7 @@ const Box: React.FC = ({ children }) => (
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-10 px-16">
+    <>
       <h1 className="text-slate-100 text-6xl">Welcome!</h1>
 
       <h2 className="text-slate-100 text-4xl">Podcasts</h2>
@@ -40,6 +40,6 @@ export default function Index() {
         <Box>Ur dur project #2</Box>
         <Box>Ur dur project #3</Box>
       </div>
-    </div>
+    </>
   )
 }
