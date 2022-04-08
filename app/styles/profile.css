@@ -1,0 +1,35 @@
+.profile-container {
+  display: flex;
+  border-radius: 50%;
+  margin: auto;
+  overflow: hidden;
+
+  background-position: center center;
+  background-size: contain;
+}
+
+.profile-image {
+  display: block;
+  animation: initial;
+  animation: opacity-gradient 3s ease infinite;
+
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.profile-image:hover {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+
+@keyframes opacity-gradient {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
