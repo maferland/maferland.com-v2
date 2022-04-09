@@ -1,7 +1,7 @@
 import Title from '~/components/typography/title'
 import { json, Link, useLoaderData } from 'remix'
 
-import * as postA from './im-joining-capdesk.mdx'
+import * as postA from './__posts/im-joining-capdesk.mdx'
 import Subtitle from '~/components/typography/subtitle'
 import Paragraph from '~/components/typography/paragraph'
 

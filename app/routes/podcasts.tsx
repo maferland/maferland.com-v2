@@ -3,7 +3,7 @@ import Subtitle from '~/components/typography/subtitle'
 import Title from '~/components/typography/title'
 
 export default function Index() {
-  const episodes = [
+  const episodes: any[] = [
     {
       title: 'Best practice in software development - can startups do it?',
       url: 'https://open.spotify.com/embed/episode/6tjggH5MFxA8sHIj3VuUvK?utm_source=generator&theme=0',
@@ -24,7 +24,7 @@ export default function Index() {
 
       <div className="grid gap-8 grid-cols-1">
         {episodes.map(({ title, description, url }) => (
-          <article className="flex flex-col gap-2">
+          <article key={title} className="flex flex-col gap-2">
             <Subtitle>{title}</Subtitle>
             <Paragraph>{description}</Paragraph>
             <iframe
